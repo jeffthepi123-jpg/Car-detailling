@@ -1,0 +1,62 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1120" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F1A31"/>
+      <stop offset="1" stop-color="#070C18"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F4D597"/>
+      <stop offset="1" stop-color="#D9AE58"/>
+    </linearGradient>
+    <linearGradient id="soft" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1B2745"/>
+      <stop offset="1" stop-color="#11192E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="1020" cy="120" r="170" fill="#1F315A" opacity="0.35"/>
+  <circle cx="180" cy="90" r="130" fill="#463616" opacity="0.25"/>
+
+  <rect x="72" y="72" width="1056" height="486" rx="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)"/>
+
+  <g>
+    <rect x="110" y="110" width="72" height="72" rx="20" fill="url(#soft)" stroke="rgba(244,213,151,0.24)"/>
+    <path d="M128 148L146 166L168 132" stroke="url(#gold)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="206" y="144" fill="#F5F7FF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Booked Detailer</text>
+  <text x="206" y="180" fill="#E5C07B" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Premium sales scripts for car detailers</text>
+
+  <text x="110" y="270" fill="#F5F7FF" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800">Turn more WhatsApp inquiries</text>
+  <text x="110" y="334" fill="#F5F7FF" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800">into booked detailing jobs.</text>
+
+  <text x="110" y="404" fill="#B7C2DD" font-family="Inter, Arial, sans-serif" font-size="28">The Car Detailing WhatsApp Booking Pack</text>
+  <text x="110" y="446" fill="#B7C2DD" font-family="Inter, Arial, sans-serif" font-size="28">Reply faster • Quote clearer • Follow up better • Book more cars</text>
+
+  <g>
+    <rect x="110" y="490" width="236" height="50" rx="16" fill="url(#gold)"/>
+    <text x="144" y="523" fill="#17120A" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">RM29 starter pack</text>
+  </g>
+
+  <g>
+    <rect x="760" y="130" width="280" height="356" rx="28" fill="#F6F8FF"/>
+    <rect x="784" y="175" width="232" height="28" rx="12" fill="#E2E8F8"/>
+    <rect x="784" y="225" width="170" height="16" rx="8" fill="#CBD5EC"/>
+    <rect x="784" y="252" width="148" height="16" rx="8" fill="#CBD5EC"/>
+    <rect x="784" y="296" width="232" height="82" rx="18" fill="#FFFFFF"/>
+    <rect x="804" y="320" width="128" height="12" rx="6" fill="#C9D3EA"/>
+    <rect x="804" y="343" width="106" height="12" rx="6" fill="#C9D3EA"/>
+    <rect x="784" y="396" width="232" height="66" rx="18" fill="#D9F6EC"/>
+    <rect x="804" y="420" width="138" height="12" rx="6" fill="#83B8AA"/>
+  </g>
+
+  <g>
+    <rect x="905" y="190" width="210" height="310" rx="28" fill="#101828" stroke="#27324C" stroke-width="3"/>
+    <text x="935" y="246" fill="#F5F7FF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Booked Detailer</text>
+    <text x="935" y="278" fill="#E5C07B" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">The Car Detailing WhatsApp Booking Pack</text>
+    <rect x="935" y="320" width="150" height="34" rx="12" fill="#151F33"/>
+    <rect x="935" y="372" width="150" height="34" rx="12" fill="#151F33"/>
+    <rect x="935" y="424" width="110" height="40" rx="14" fill="url(#gold)"/>
+    <text x="964" y="451" fill="#17120A" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">RM29</text>
+  </g>
+</svg>
