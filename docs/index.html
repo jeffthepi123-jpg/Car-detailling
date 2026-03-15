@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Booked Detailer — The Car Detailing WhatsApp Booking Pack</title>
+  <meta name="description" content="Booked Detailer helps car detailers turn more WhatsApp inquiries into paid bookings with premium ready-made scripts, clearer quotes, and better follow-up.">
+  <meta property="og:title" content="Booked Detailer — The Car Detailing WhatsApp Booking Pack">
+  <meta property="og:description" content="A premium script pack for car detailers who want faster replies, clearer quotes, and more booked jobs.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/product-mockup.svg">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="icon" type="image/svg+xml" href="assets/booked-detailer-logo.svg">
+  <style>
+    :root {
+      --bg: #08101b;
+      --bg-2: #0d1526;
+      --panel: rgba(17, 24, 39, 0.72);
+      --text: #f5f7ff;
+      --muted: #b7c2dd;
+      --line: rgba(255,255,255,0.09);
+      --gold: #e5c07b;
+      --gold-2: #f4d597;
+      --blue: #7db5ff;
+      --green: #7ee0c3;
+      --danger: #ff9c9c;
+      --shadow: 0 24px 80px rgba(0,0,0,.42);
+      --radius: 22px;
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at top left, rgba(125,181,255,.14), transparent 24%),
+        radial-gradient(circle at top right, rgba(229,192,123,.12), transparent 26%),
+        linear-gradient(180deg, var(--bg) 0%, #09111d 100%);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .section { padding: 84px 0; }
+    .section-tight { padding: 56px 0; }
+    .topbar { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(14px); background: rgba(8, 16, 27, .72); border-bottom: 1px solid var(--line); }
+    .topbar-inner { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .2px; }
+    .brand img { width: 34px; height: 34px; border-radius: 12px; }
+    .brand-sub { color: var(--muted); font-weight: 600; font-size: 12px; display: block; }
+    .nav { display: flex; gap: 18px; align-items: center; color: var(--muted); font-size: 14px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 20px; border-radius: 14px; border: 1px solid transparent; font-weight: 800; transition: .2s ease; cursor: pointer; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-2)); color: #17120a; box-shadow: 0 14px 36px rgba(229,192,123,.22); }
+    .btn-secondary { background: rgba(255,255,255,.03); color: var(--text); border-color: var(--line); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 999px; background: rgba(229,192,123,.08); border: 1px solid rgba(229,192,123,.18); color: #f0d6a4; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 18px; }
+    h1,h2,h3,h4 { line-height: 1.06; margin: 0 0 16px; }
+    h1 { font-size: clamp(42px, 7vw, 74px); letter-spacing: -2px; }
+    h2 { font-size: clamp(30px, 4vw, 48px); letter-spacing: -1.4px; }
+    h3 { font-size: 24px; }
+    .lead { font-size: clamp(18px, 2.3vw, 22px); color: var(--muted); max-width: 760px; }
+    .hero { padding: 82px 0 52px; }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; gap: 28px; align-items: center; }
+    .hero-points { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin: 28px 0 30px; }
+    .point, .mini-card, .price-card, .script-card, .faq-item, .feature-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.022));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .point { padding: 16px 18px; color: #e7edff; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .note { font-size: 14px; color: var(--muted); margin-top: 12px; }
+    .product-card { padding: 24px; }
+    .kicker { color: var(--gold); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; margin-bottom: 10px; }
+    .grid-2, .grid-3, .pricing-grid, .scripts, .feature-grid { display: grid; gap: 18px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .feature-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+    .pricing-grid, .scripts { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .mini-card, .price-card, .script-card, .feature-card { padding: 24px; }
+    .mini-card p, .script-card p, .feature-card p, .faq-item p { color: var(--muted); margin: 0; }
+    ul.clean { list-style: none; padding: 0; margin: 0; }
+    ul.clean li { position: relative; padding-left: 28px; margin: 10px 0; color: #e2e9ff; }
+    ul.clean li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 900; }
+    .problem-list li::before { content: "×"; color: var(--danger); }
+    .feature-num { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 14px; background: rgba(229,192,123,.08); border: 1px solid rgba(229,192,123,.2); color: var(--gold); font-weight: 800; }
+    .script { white-space: pre-line; color: #eaf0ff; font-size: 15px; }
+    .price-card.featured { border-color: rgba(229,192,123,.36); transform: translateY(-4px); box-shadow: 0 26px 60px rgba(229,192,123,.1); }
+    .tag { display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(229,192,123,.1); color: var(--gold); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 12px; }
+    .price { font-size: 52px; font-weight: 900; letter-spacing: -1.6px; margin: 10px 0 8px; }
+    .muted { color: var(--muted); }
+    .cta-band { background: linear-gradient(135deg, rgba(229,192,123,.08), rgba(125,181,255,.08)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .faq-item { padding: 22px; }
+    .faq-item summary { cursor: pointer; list-style: none; font-weight: 800; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item[open] summary { margin-bottom: 10px; }
+    .logo-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+    .logo-pill { border: 1px solid var(--line); color: var(--muted); padding: 10px 12px; border-radius: 999px; background: rgba(255,255,255,.02); font-size: 13px; }
+    .footer { padding: 36px 0 56px; color: var(--muted); font-size: 14px; }
+    .footer-grid { display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+    .small { font-size: 13px; color: var(--muted); }
+    @media (max-width: 960px) {
+      .hero-grid, .grid-2, .grid-3, .pricing-grid, .scripts, .feature-grid { grid-template-columns: 1fr; }
+      .nav { display: none; }
+      .hero-points { grid-template-columns: 1fr; }
+      .price-card.featured { transform: none; }
+      .footer-grid { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <img src="assets/booked-detailer-logo.svg" alt="Booked Detailer logo">
+        <div>
+          Booked Detailer
+          <span class="brand-sub">Premium sales scripts for car detailers</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#benefits">Benefits</a>
+        <a href="#inside">Inside</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://wa.me/601154198509?text=Hi%20I%27m%20interested%20in%20The%20Car%20Detailing%20WhatsApp%20Booking%20Pack" class="btn btn-primary">Buy on WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Premium mini product for detailers who want more bookings</div>
+          <h1>Turn more WhatsApp inquiries into booked detailing jobs.</h1>
+          <p class="lead">Booked Detailer gives car detailers a premium ready-made script pack to reply faster, quote more clearly, follow up better, and close more jobs from the leads they already get.</p>
+          <div class="hero-points">
+            <div class="point">Clearer replies that sound more professional.</div>
+            <div class="point">Better quoting without vague back-and-forth.</div>
+            <div class="point">Smarter package recommendations.</div>
+            <div class="point">Follow-up scripts that recover missed bookings.</div>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/601154198509?text=Hi%20I%27m%20interested%20in%20The%20Car%20Detailing%20WhatsApp%20Booking%20Pack">Buy Now on WhatsApp</a>
+            <a class="btn btn-secondary" href="#preview">See Script Preview</a>
+          </div>
+          <div class="note">Setup time: about 15 to 30 minutes. Works with WhatsApp, Notes, Google Docs, or any quick-reply setup.</div>
+          <div class="logo-row">
+            <div class="logo-pill">For solo detailers</div>
+            <div class="logo-pill">For mobile detailers</div>
+            <div class="logo-pill">For small detailing shops</div>
+          </div>
+        </div>
+        <div class="point product-card">
+          <img src="assets/product-mockup.svg" alt="Booked Detailer product mockup showing the car detailing WhatsApp booking pack">
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="wrap feature-grid">
+        <div class="feature-card"><div class="feature-num">01</div><h3>Reply fast</h3><p>Stop typing the same answers from scratch every day.</p></div>
+        <div class="feature-card"><div class="feature-num">02</div><h3>Quote clearly</h3><p>Ask the right questions before pricing the job.</p></div>
+        <div class="feature-card"><div class="feature-num">03</div><h3>Recommend better</h3><p>Guide buyers to the package that fits their car and budget.</p></div>
+        <div class="feature-card"><div class="feature-num">04</div><h3>Book more</h3><p>Use better follow-up and stronger closes to lock in jobs.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="benefits">
+      <div class="wrap grid-2">
+        <div>
+          <div class="kicker">The real problem</div>
+          <h2>You are not always losing the job. Sometimes you are losing the chat.</h2>
+          <p class="lead">Most detailers already get interest. The leak happens between first message and confirmed booking.</p>
+          <ul class="clean problem-list">
+            <li>Slow replies make leads cool off.</li>
+            <li>Weak quotes create confusion and price objections.</li>
+            <li>Too many options overwhelm the customer.</li>
+            <li>No follow-up means easy bookings vanish.</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <div class="kicker">What this changes</div>
+          <ul class="clean">
+            <li>You sound more organized and professional.</li>
+            <li>You ask for the right details before quoting.</li>
+            <li>You recommend packages with confidence.</li>
+            <li>You stop ending chats without a clear next step.</li>
+            <li>You make it easier for customers to say yes.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="inside">
+      <div class="wrap">
+        <div class="kicker">What’s inside</div>
+        <h2>A compact product built for immediate use.</h2>
+        <div class="grid-3" style="margin-top:24px;">
+          <div class="mini-card"><h3>Core reply scripts</h3><p>First replies, price inquiry replies, package recommendations, quote scripts, and booking closes.</p></div>
+          <div class="mini-card"><h3>Follow-up system</h3><p>Same-day follow-up, next-day follow-up, objection replies, and simple nudges that do not sound desperate.</p></div>
+          <div class="mini-card"><h3>Operational tools</h3><p>A daily booking checklist and lead tracker template so the buyer can actually use the pack daily.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="preview">
+      <div class="wrap">
+        <div class="kicker">Preview</div>
+        <h2>Short, clean scripts that move the customer forward.</h2>
+        <div class="scripts" style="margin-top:24px;">
+          <div class="script-card"><h3>First reply</h3><div class="script">Hi, thanks for messaging [Business Name].
+Yes, we do car detailing.
+
+To recommend the right package, please send:
+- car model
+- service needed
+- a few photos
+- preferred day/time
+
+Once I have that, I’ll advise the best option.</div></div>
+          <div class="script-card"><h3>Price inquiry reply</h3><div class="script">Hi. Price depends on your car size, condition, and package needed.
+
+Send me:
+- car model
+- interior / exterior / full detail
+- a few photos
+
+Then I can give you the best option and estimated price.</div></div>
+          <div class="script-card"><h3>Follow-up</h3><div class="script">Hi, just checking if you saw the quote I sent earlier.
+If you want, I can also recommend the best option based on your budget.</div></div>
+          <div class="script-card"><h3>Booking close</h3><div class="script">If you’re happy to proceed, please send:
+- full name
+- car model
+- preferred date/time
+- any special issues to note
+
+Then I’ll confirm your booking.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-band">
+      <div class="wrap grid-2" style="align-items:center;">
+        <div>
+          <div class="kicker">Fast result</div>
+          <h2>Set it up once. Use it every day.</h2>
+          <p class="lead">Pick the scripts, add your package names and prices, save them in your quick replies, and start using them the same day.</p>
+        </div>
+        <div class="mini-card">
+          <h3>Best fit for:</h3>
+          <ul class="clean">
+            <li>Solo car detailers</li>
+            <li>Mobile detailing services</li>
+            <li>Home-based detailers</li>
+            <li>Small detailing shops</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="wrap">
+        <div class="kicker">Pricing idea</div>
+        <h2>Simple offer structure for testing demand.</h2>
+        <div class="pricing-grid" style="margin-top:24px;">
+          <div class="price-card">
+            <div class="tag">Starter</div>
+            <h3>Basic Pack</h3>
+            <div class="price">RM29</div>
+            <p class="muted">A clean entry offer for first sales.</p>
+            <ul class="clean" style="margin:18px 0 24px;">
+              <li>Core WhatsApp scripts</li>
+              <li>Quote templates</li>
+              <li>Follow-up replies</li>
+              <li>Booking confirmations</li>
+              <li>Checklist + tracker</li>
+            </ul>
+            <a class="btn btn-secondary" href="https://wa.me/601154198509?text=Hi%20I%27m%20interested%20in%20the%20Basic%20Pack%20for%20Booked%20Detailer">Buy Basic on WhatsApp</a>
+          </div>
+          <div class="price-card featured">
+            <div class="tag">Best value</div>
+            <h3>Pack + Bonus Templates</h3>
+            <div class="price">RM49</div>
+            <p class="muted">Stronger perceived value and easier positioning.</p>
+            <ul class="clean" style="margin:18px 0 24px;">
+              <li>Everything in Basic</li>
+              <li>Quick-start guide</li>
+              <li>Bonus editable templates</li>
+              <li>Better premium positioning</li>
+              <li>Easier higher-price testing</li>
+            </ul>
+            <a class="btn btn-primary" href="https://wa.me/601154198509?text=Hi%20I%27m%20interested%20in%20the%20RM49%20Pack%20for%20Booked%20Detailer">Buy on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="buy">
+      <div class="wrap">
+        <div class="mini-card" style="padding:34px; text-align:center;">
+          <div class="kicker">Buy now</div>
+          <h2>If you already get inquiries, this helps you convert more of them.</h2>
+          <p class="lead" style="margin: 0 auto 24px; max-width: 760px;">Booked Detailer is a premium starter product for detailers who want better replies, cleaner quotes, stronger follow-up, and more booked jobs — without overcomplicating the sales process.</p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a class="btn btn-primary" href="https://wa.me/601154198509?text=Hi%20I%27m%20ready%20to%20buy%20Booked%20Detailer">Buy Now on WhatsApp</a>
+            <a class="btn btn-secondary" href="#preview">Preview the scripts</a>
+          </div>
+          <p class="small" style="margin-top:16px;">WhatsApp button opens a real order/contact link.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="kicker">FAQ</div>
+        <h2>Questions buyers may ask before purchasing.</h2>
+        <div class="grid-2" style="margin-top:24px;">
+          <details class="faq-item" open><summary>Is this for beginners?</summary><p>Yes. The pack is made to be simple, practical, and easy to customize even if the buyer has never used templates before.</p></details>
+          <details class="faq-item"><summary>Do I need any software?</summary><p>No. The scripts work in WhatsApp, Notes, Google Docs, or anywhere quick replies can be saved.</p></details>
+          <details class="faq-item"><summary>Will this guarantee more sales?</summary><p>No honest product can promise that. But it can help the buyer reply faster, communicate more clearly, and stop losing easy bookings because of weak chat handling.</p></details>
+          <details class="faq-item"><summary>Is it only for mobile detailers?</summary><p>No. It also works for shop-based and home-based detailing businesses.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div><strong>Booked Detailer</strong><div class="small">Premium sales scripts for car detailers.</div></div>
+      <div class="small">GitHub Pages-ready mini site with logo, mockup, and live WhatsApp buy buttons.</div>
+    </div>
+  </footer>
+</body>
+</html>
