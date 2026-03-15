@@ -3,366 +3,200 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Car Detailing WhatsApp Booking Pack</title>
-  <meta name="description" content="A practical script pack for car detailers who want faster replies, clearer quotes, and more bookings from WhatsApp inquiries.">
+  <title>Booked Detailer — The Car Detailing WhatsApp Booking Pack</title>
+  <meta name="description" content="Booked Detailer helps car detailers turn more WhatsApp inquiries into paid bookings with premium ready-made scripts, clearer quotes, and better follow-up.">
+  <meta property="og:title" content="Booked Detailer — The Car Detailing WhatsApp Booking Pack">
+  <meta property="og:description" content="A premium script pack for car detailers who want faster replies, clearer quotes, and more booked jobs.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0b1020">
   <style>
     :root {
-      --bg: #0b1020;
-      --panel: #121a31;
-      --panel-2: #182241;
-      --text: #eef2ff;
-      --muted: #b7c0dd;
-      --line: rgba(255,255,255,0.1);
-      --accent: #66e3c4;
-      --accent-2: #7cb8ff;
-      --accent-3: #ffd166;
-      --danger: #ff8b8b;
-      --shadow: 0 20px 60px rgba(0,0,0,.35);
-      --radius: 18px;
-      --max: 1120px;
+      --bg: #08101b;
+      --bg-2: #0d1526;
+      --panel: rgba(17, 24, 39, 0.72);
+      --panel-solid: #101827;
+      --panel-soft: #151f33;
+      --text: #f5f7ff;
+      --muted: #b7c2dd;
+      --line: rgba(255,255,255,0.09);
+      --gold: #e5c07b;
+      --gold-2: #f4d597;
+      --blue: #7db5ff;
+      --green: #7ee0c3;
+      --danger: #ff9c9c;
+      --shadow: 0 24px 80px rgba(0,0,0,.42);
+      --radius: 22px;
+      --max: 1160px;
     }
-
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       color: var(--text);
-      background:
-        radial-gradient(circle at top right, rgba(124,184,255,.16), transparent 30%),
-        radial-gradient(circle at top left, rgba(102,227,196,.10), transparent 25%),
-        linear-gradient(180deg, #08101f 0%, #0b1020 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
+      background:
+        radial-gradient(circle at top left, rgba(125,181,255,.14), transparent 24%),
+        radial-gradient(circle at top right, rgba(229,192,123,.12), transparent 26%),
+        linear-gradient(180deg, var(--bg) 0%, #09111d 100%);
     }
-
     a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-
     .wrap { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
-    .section { padding: 72px 0; }
-    .section-tight { padding: 48px 0; }
-
+    .section { padding: 84px 0; }
+    .section-tight { padding: 56px 0; }
     .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(10px);
-      background: rgba(8,16,31,.72);
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(8, 16, 27, .72);
       border-bottom: 1px solid var(--line);
     }
-
     .topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      min-height: 68px;
+      min-height: 74px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
     }
-
-    .brand {
-      font-weight: 800;
-      letter-spacing: .2px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .brand-badge {
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 0 24px rgba(102,227,196,.5);
-    }
-
-    .nav {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      color: var(--muted);
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .2px; }
+    .brand-mark {
+      width: 34px; height: 34px; border-radius: 12px;
+      display: grid; place-items: center;
+      background: linear-gradient(135deg, rgba(229,192,123,.22), rgba(125,181,255,.2));
+      border: 1px solid rgba(229,192,123,.25);
+      box-shadow: 0 10px 24px rgba(229,192,123,.14);
       font-size: 14px;
     }
-
+    .brand-sub { color: var(--muted); font-weight: 600; font-size: 12px; display: block; }
+    .nav { display: flex; gap: 18px; align-items: center; color: var(--muted); font-size: 14px; }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 14px 20px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-      font-weight: 700;
-      transition: .2s ease;
-      cursor: pointer;
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 14px 20px; border-radius: 14px; border: 1px solid transparent;
+      font-weight: 800; transition: .2s ease; cursor: pointer;
     }
-
+    .btn:hover { transform: translateY(-1px); }
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #09101f;
-      box-shadow: 0 12px 30px rgba(102,227,196,.22);
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #17120a;
+      box-shadow: 0 14px 36px rgba(229,192,123,.22);
     }
-
-    .btn-primary:hover { transform: translateY(-1px); }
-
     .btn-secondary {
       background: rgba(255,255,255,.03);
-      border-color: var(--line);
       color: var(--text);
+      border-color: var(--line);
     }
-
-    .hero {
-      padding: 76px 0 44px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 28px;
-      align-items: center;
-    }
-
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 12px;
-      background: rgba(124,184,255,.08);
-      border: 1px solid rgba(124,184,255,.16);
-      color: #d4e5ff;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 8px 12px; border-radius: 999px;
+      background: rgba(229,192,123,.08);
+      border: 1px solid rgba(229,192,123,.18);
+      color: #f0d6a4; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
       margin-bottom: 18px;
     }
-
-    h1, h2, h3 { line-height: 1.1; margin: 0 0 16px; }
-    h1 { font-size: clamp(40px, 7vw, 68px); letter-spacing: -1.8px; }
-    h2 { font-size: clamp(28px, 4vw, 44px); letter-spacing: -1.2px; }
-    h3 { font-size: 22px; }
-
-    .lead {
-      font-size: clamp(18px, 2.4vw, 22px);
-      color: var(--muted);
-      max-width: 740px;
-    }
-
-    .hero-points {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 12px;
-      margin: 26px 0 30px;
-    }
-
-    .point {
-      background: rgba(255,255,255,.03);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 14px 16px;
-      color: #dfe7ff;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 24px;
-    }
-
-    .note {
-      color: var(--muted);
-      font-size: 14px;
-      margin-top: 14px;
-    }
-
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));
+    h1,h2,h3,h4 { line-height: 1.06; margin: 0 0 16px; }
+    h1 { font-size: clamp(42px, 7vw, 74px); letter-spacing: -2px; }
+    h2 { font-size: clamp(30px, 4vw, 48px); letter-spacing: -1.4px; }
+    h3 { font-size: 24px; }
+    .lead { font-size: clamp(18px, 2.3vw, 22px); color: var(--muted); max-width: 760px; }
+    .hero { padding: 82px 0 52px; }
+    .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 28px; align-items: center; }
+    .hero-points { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin: 28px 0 30px; }
+    .point, .mini-card, .price-card, .script-card, .faq-item, .feature-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.022));
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
-
-    .product-card {
-      padding: 24px;
-      position: relative;
-      overflow: hidden;
-    }
-
+    .point { padding: 16px 18px; color: #e7edff; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .note { font-size: 14px; color: var(--muted); margin-top: 12px; }
+    .product-card { padding: 24px; position: relative; overflow: hidden; }
     .product-card::after {
-      content: "";
-      position: absolute;
-      inset: auto -10% -30% auto;
-      width: 240px;
-      height: 240px;
-      background: radial-gradient(circle, rgba(102,227,196,.22), transparent 60%);
-      pointer-events: none;
+      content: ""; position: absolute; width: 260px; height: 260px; right: -30px; bottom: -80px;
+      background: radial-gradient(circle, rgba(229,192,123,.18), transparent 60%); pointer-events: none;
     }
-
     .mock {
-      background: linear-gradient(180deg, #f8fbff, #e9f1ff);
-      color: #16203a;
-      border-radius: 16px;
-      padding: 18px;
-      min-height: 460px;
-      border: 1px solid rgba(0,0,0,.06);
+      background: linear-gradient(180deg, #fbfcff, #eef3ff);
+      color: #18223a; border-radius: 18px; padding: 18px;
+      min-height: 500px; border: 1px solid rgba(0,0,0,.06);
     }
-
-    .mock-top {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 16px;
-      font-size: 13px;
-      color: #586483;
-    }
-
+    .mock-top { display: flex; align-items: center; gap: 8px; color: #5e6984; font-size: 13px; margin-bottom: 14px; }
+    .dot { width: 8px; height: 8px; border-radius: 999px; background: #ced7eb; }
     .bubble {
-      background: #ffffff;
-      border-radius: 14px 14px 14px 4px;
-      padding: 12px 14px;
-      margin: 10px 0;
-      box-shadow: 0 8px 24px rgba(13,25,50,.08);
-      font-size: 14px;
+      background: #fff; border-radius: 15px 15px 15px 4px; padding: 12px 14px; margin: 10px 0;
+      box-shadow: 0 8px 24px rgba(13,25,50,.08); font-size: 14px; white-space: pre-line;
     }
-
-    .bubble.accent {
-      background: #daf8ef;
-      margin-left: 26px;
-      border-radius: 14px 14px 4px 14px;
-    }
-
-    .grid-3, .grid-2, .pricing-grid {
-      display: grid;
-      gap: 18px;
-    }
-
-    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    .pricing-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-
-    .mini-card, .price-card, .faq-item, .script-card {
-      padding: 22px;
-    }
-
-    .mini-card p, .faq-item p, .script-card p { color: var(--muted); margin: 0; }
-
+    .bubble.accent { background: #daf8ef; margin-left: 28px; border-radius: 15px 15px 4px 15px; }
     .kicker {
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      margin-bottom: 10px;
+      color: var(--gold); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; margin-bottom: 10px;
     }
-
-    ul.clean {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    .grid-2, .grid-3, .pricing-grid, .scripts, .feature-grid { display: grid; gap: 18px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .feature-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+    .pricing-grid, .scripts { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .mini-card, .price-card, .script-card, .feature-card { padding: 24px; }
+    .mini-card p, .script-card p, .feature-card p { color: var(--muted); margin: 0; }
+    ul.clean { list-style: none; padding: 0; margin: 0; }
+    ul.clean li { position: relative; padding-left: 28px; margin: 10px 0; color: #e2e9ff; }
+    ul.clean li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 900; }
+    .problem-list li::before { content: "×"; color: var(--danger); }
+    .feature-num {
+      width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 14px;
+      background: rgba(229,192,123,.08); border: 1px solid rgba(229,192,123,.2); color: var(--gold); font-weight: 800;
     }
-
-    ul.clean li {
-      position: relative;
-      padding-left: 28px;
-      margin: 10px 0;
-      color: #dfe7ff;
-    }
-
-    ul.clean li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-weight: 800;
-    }
-
-    .problem-list li::before { color: var(--danger); content: "×"; }
-
-    .scripts {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 18px;
-    }
-
-    .script {
-      margin-top: 10px;
-      white-space: pre-line;
-      color: #e8eeff;
-      font-size: 15px;
-    }
-
+    .script { white-space: pre-line; color: #eaf0ff; font-size: 15px; }
     .price-card.featured {
-      border-color: rgba(102,227,196,.45);
+      border-color: rgba(229,192,123,.36);
       transform: translateY(-4px);
-      box-shadow: 0 24px 50px rgba(102,227,196,.10);
+      box-shadow: 0 26px 60px rgba(229,192,123,.1);
     }
-
     .tag {
-      display: inline-block;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(102,227,196,.12);
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
+      display: inline-block; padding: 6px 10px; border-radius: 999px;
+      background: rgba(229,192,123,.1); color: var(--gold);
+      font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 12px;
     }
-
-    .price {
-      font-size: 48px;
-      font-weight: 900;
-      letter-spacing: -1.6px;
-      margin: 10px 0 8px;
-    }
-
+    .price { font-size: 52px; font-weight: 900; letter-spacing: -1.6px; margin: 10px 0 8px; }
     .muted { color: var(--muted); }
-
-    .faq-item summary {
-      cursor: pointer;
-      list-style: none;
-      font-weight: 700;
+    .cta-band {
+      background: linear-gradient(135deg, rgba(229,192,123,.08), rgba(125,181,255,.08));
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
     }
-
+    .faq-item { padding: 22px; }
+    .faq-item summary { cursor: pointer; list-style: none; font-weight: 800; }
     .faq-item summary::-webkit-details-marker { display: none; }
     .faq-item[open] summary { margin-bottom: 10px; }
-
-    .cta-band {
-      background: linear-gradient(135deg, rgba(102,227,196,.12), rgba(124,184,255,.10));
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+    .logo-row {
+      display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px;
     }
-
-    .footer {
-      padding: 34px 0 56px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .small {
+    .logo-pill {
+      border: 1px solid var(--line); color: var(--muted); padding: 10px 12px; border-radius: 999px; background: rgba(255,255,255,.02);
       font-size: 13px;
-      color: var(--muted);
     }
-
-    @media (max-width: 920px) {
-      .hero-grid, .grid-3, .grid-2, .pricing-grid, .scripts { grid-template-columns: 1fr; }
+    .footer { padding: 36px 0 56px; color: var(--muted); font-size: 14px; }
+    .footer-grid { display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+    .small { font-size: 13px; color: var(--muted); }
+    @media (max-width: 960px) {
+      .hero-grid, .grid-2, .grid-3, .pricing-grid, .scripts, .feature-grid { grid-template-columns: 1fr; }
       .nav { display: none; }
-      .hero { padding-top: 48px; }
       .hero-points { grid-template-columns: 1fr; }
       .price-card.featured { transform: none; }
+      .footer-grid { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="wrap topbar-inner">
-      <div class="brand"><span class="brand-badge"></span> The Car Detailing WhatsApp Booking Pack</div>
+      <div class="brand">
+        <div class="brand-mark">BD</div>
+        <div>
+          Booked Detailer
+          <span class="brand-sub">Premium sales scripts for car detailers</span>
+        </div>
+      </div>
       <nav class="nav">
         <a href="#benefits">Benefits</a>
-        <a href="#inside">What’s Inside</a>
+        <a href="#inside">Inside</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
-        <a href="#buy" class="btn btn-primary">Get the Pack</a>
+        <a href="https://wa.me/601154198509?text=Hi%20I%27m%20interested%20in%20The%20Car%20Detailing%20WhatsApp%20Booking%20Pack" class="btn btn-primary">Buy on WhatsApp</a>
       </nav>
     </div>
   </header>
@@ -371,27 +205,29 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow">Built for solo detailers, mobile detailers, and small detailing shops</div>
-          <h1>Turn more WhatsApp inquiries into paid bookings.</h1>
-          <p class="lead">A ready-made script pack for car detailers who want faster replies, clearer quotes, better follow-up, and more booked jobs — without sounding pushy.</p>
-
+          <div class="eyebrow">Premium mini product for detailers who want more bookings</div>
+          <h1>Turn more WhatsApp inquiries into booked detailing jobs.</h1>
+          <p class="lead">Booked Detailer gives car detailers a premium ready-made script pack to reply faster, quote more clearly, follow up better, and close more jobs from the leads they already get.</p>
           <div class="hero-points">
-            <div class="point">Reply faster without typing from scratch every time.</div>
-            <div class="point">Quote more clearly and avoid vague back-and-forth.</div>
-            <div class="point">Guide customers to the right package.</div>
-            <div class="point">Follow up properly and recover missed bookings.</div>
+            <div class="point">Clearer replies that sound more professional.</div>
+            <div class="point">Better quoting without vague back-and-forth.</div>
+            <div class="point">Smarter package recommendations.</div>
+            <div class="point">Follow-up scripts that recover missed bookings.</div>
           </div>
-
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#buy">Get the Booking Pack</a>
+            <a class="btn btn-primary" href="https://wa.me/601154198509?text=Hi%20I%27m%20interested%20in%20The%20Car%20Detailing%20WhatsApp%20Booking%20Pack">Buy Now on WhatsApp</a>
             <a class="btn btn-secondary" href="#preview">See Script Preview</a>
           </div>
-          <div class="note">Setup time: about 15 to 30 minutes. No special software needed.</div>
+          <div class="note">Setup time: about 15 to 30 minutes. Works with WhatsApp, Notes, Google Docs, or any quick-reply setup.</div>
+          <div class="logo-row">
+            <div class="logo-pill">For solo detailers</div>
+            <div class="logo-pill">For mobile detailers</div>
+            <div class="logo-pill">For small detailing shops</div>
+          </div>
         </div>
-
-        <div class="card product-card">
+        <div class="point product-card">
           <div class="mock">
-            <div class="mock-top">WhatsApp Preview · Sample customer flow</div>
+            <div class="mock-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span> WhatsApp flow preview</div>
             <div class="bubble">Hi, how much for car detailing for Honda City?</div>
             <div class="bubble accent">Hi. Price depends on your car size, condition, and package needed.
 
@@ -424,21 +260,26 @@ If you want, I can lock it in for you.</div>
     </section>
 
     <section class="section-tight">
-      <div class="wrap grid-3">
-        <div class="card mini-card">
-          <div class="kicker">Problem</div>
-          <h3>You’re already getting leads.</h3>
-          <p>You’re just losing too many of them in chat. People ask for price, package, or availability, then disappear.</p>
+      <div class="wrap feature-grid">
+        <div class="feature-card">
+          <div class="feature-num">01</div>
+          <h3>Reply fast</h3>
+          <p>Stop typing the same answers from scratch every day.</p>
         </div>
-        <div class="card mini-card">
-          <div class="kicker">Solution</div>
-          <h3>Use proven replies.</h3>
-          <p>Stop typing from scratch. Use structured scripts that move the customer toward a booking.</p>
+        <div class="feature-card">
+          <div class="feature-num">02</div>
+          <h3>Quote clearly</h3>
+          <p>Ask the right questions before pricing the job.</p>
         </div>
-        <div class="card mini-card">
-          <div class="kicker">Result</div>
-          <h3>Reply faster. Book more cars.</h3>
-          <p>Clearer chats lead to cleaner quotes, better follow-up, and more paid bookings.</p>
+        <div class="feature-card">
+          <div class="feature-num">03</div>
+          <h3>Recommend better</h3>
+          <p>Guide buyers to the package that fits their car and budget.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">04</div>
+          <h3>Book more</h3>
+          <p>Use better follow-up and stronger closes to lock in jobs.</p>
         </div>
       </div>
     </section>
@@ -446,24 +287,24 @@ If you want, I can lock it in for you.</div>
     <section class="section" id="benefits">
       <div class="wrap grid-2">
         <div>
-          <div class="kicker">Why this works</div>
-          <h2>Most detailers do not need more leads first.</h2>
-          <p class="lead">They need a better way to handle the leads they already have.</p>
+          <div class="kicker">The real problem</div>
+          <h2>You are not always losing the job. Sometimes you are losing the chat.</h2>
+          <p class="lead">Most detailers already get interest. The leak happens between first message and confirmed booking.</p>
           <ul class="clean problem-list">
-            <li>Slow replies make customers lose interest.</li>
-            <li>Weak quoting creates confusion and price objections.</li>
-            <li>No follow-up means easy bookings slip away.</li>
+            <li>Slow replies make leads cool off.</li>
+            <li>Weak quotes create confusion and price objections.</li>
             <li>Too many options overwhelm the customer.</li>
+            <li>No follow-up means easy bookings vanish.</li>
           </ul>
         </div>
-        <div class="card mini-card">
-          <div class="kicker">What changes</div>
+        <div class="mini-card">
+          <div class="kicker">What this changes</div>
           <ul class="clean">
-            <li>You ask the right questions before quoting.</li>
-            <li>You recommend the right package with confidence.</li>
-            <li>You stop sounding vague, rushed, or unsure.</li>
-            <li>You follow up without sounding desperate.</li>
-            <li>You make the next step obvious.</li>
+            <li>You sound more organized and professional.</li>
+            <li>You ask for the right details before quoting.</li>
+            <li>You recommend packages with confidence.</li>
+            <li>You stop ending chats without a clear next step.</li>
+            <li>You make it easier for customers to say yes.</li>
           </ul>
         </div>
       </div>
@@ -472,19 +313,19 @@ If you want, I can lock it in for you.</div>
     <section class="section" id="inside">
       <div class="wrap">
         <div class="kicker">What’s inside</div>
-        <h2>Everything you need to handle more bookings properly.</h2>
+        <h2>A compact product built for immediate use.</h2>
         <div class="grid-3" style="margin-top:24px;">
-          <div class="card mini-card">
-            <h3>Reply scripts</h3>
-            <p>Ready-made first replies, price inquiry responses, package recommendations, and quote messages.</p>
+          <div class="mini-card">
+            <h3>Core reply scripts</h3>
+            <p>First replies, price inquiry replies, package recommendations, quote scripts, and booking closes.</p>
           </div>
-          <div class="card mini-card">
+          <div class="mini-card">
             <h3>Follow-up system</h3>
-            <p>Simple messages for same-day follow-up, next-day follow-up, gentle nudges, and objection handling.</p>
+            <p>Same-day follow-up, next-day follow-up, objection replies, and simple nudges that do not sound desperate.</p>
           </div>
-          <div class="card mini-card">
-            <h3>Booking tools</h3>
-            <p>Booking close scripts, confirmation templates, a daily checklist, and a lead tracker template.</p>
+          <div class="mini-card">
+            <h3>Operational tools</h3>
+            <p>A daily booking checklist and lead tracker template so the buyer can actually use the pack daily.</p>
           </div>
         </div>
       </div>
@@ -492,10 +333,10 @@ If you want, I can lock it in for you.</div>
 
     <section class="section" id="preview">
       <div class="wrap">
-        <div class="kicker">Script preview</div>
-        <h2>Short, practical scripts you can use today.</h2>
+        <div class="kicker">Preview</div>
+        <h2>Short, clean scripts that move the customer forward.</h2>
         <div class="scripts" style="margin-top:24px;">
-          <div class="card script-card">
+          <div class="script-card">
             <h3>First reply</h3>
             <div class="script">Hi, thanks for messaging [Business Name].
 Yes, we do car detailing.
@@ -508,7 +349,7 @@ To recommend the right package, please send:
 
 Once I have that, I’ll advise the best option.</div>
           </div>
-          <div class="card script-card">
+          <div class="script-card">
             <h3>Price inquiry reply</h3>
             <div class="script">Hi. Price depends on your car size, condition, and package needed.
 
@@ -519,12 +360,12 @@ Send me:
 
 Then I can give you the best option and estimated price.</div>
           </div>
-          <div class="card script-card">
+          <div class="script-card">
             <h3>Follow-up</h3>
             <div class="script">Hi, just checking if you saw the quote I sent earlier.
 If you want, I can also recommend the best option based on your budget.</div>
           </div>
-          <div class="card script-card">
+          <div class="script-card">
             <h3>Booking close</h3>
             <div class="script">If you’re happy to proceed, please send:
 - full name
@@ -542,11 +383,11 @@ Then I’ll confirm your booking.</div>
       <div class="wrap grid-2" style="align-items:center;">
         <div>
           <div class="kicker">Fast result</div>
-          <h2>Set it up in under 30 minutes.</h2>
-          <p class="lead">Pick the scripts, add your prices and package names, save them in WhatsApp or Notes, and start using them the same day.</p>
+          <h2>Set it up once. Use it every day.</h2>
+          <p class="lead">Pick the scripts, add your package names and prices, save them in your quick replies, and start using them the same day.</p>
         </div>
-        <div class="card mini-card">
-          <h3>Best for:</h3>
+        <div class="mini-card">
+          <h3>Best fit for:</h3>
           <ul class="clean">
             <li>Solo car detailers</li>
             <li>Mobile detailing services</li>
@@ -559,36 +400,36 @@ Then I’ll confirm your booking.</div>
 
     <section class="section" id="pricing">
       <div class="wrap">
-        <div class="kicker">Pricing</div>
-        <h2>Simple pricing. Easy to test.</h2>
+        <div class="kicker">Pricing idea</div>
+        <h2>Simple offer structure for testing demand.</h2>
         <div class="pricing-grid" style="margin-top:24px;">
-          <div class="card price-card">
+          <div class="price-card">
             <div class="tag">Starter</div>
             <h3>Basic Pack</h3>
             <div class="price">RM29</div>
-            <p class="muted">A practical starter version for testing demand.</p>
+            <p class="muted">A clean entry offer for first sales.</p>
             <ul class="clean" style="margin:18px 0 24px;">
-              <li>Core WhatsApp reply scripts</li>
-              <li>Quote and follow-up templates</li>
-              <li>Booking confirmation scripts</li>
-              <li>Daily booking checklist</li>
-              <li>Lead tracker template</li>
+              <li>Core WhatsApp scripts</li>
+              <li>Quote templates</li>
+              <li>Follow-up replies</li>
+              <li>Booking confirmations</li>
+              <li>Checklist + tracker</li>
             </ul>
-            <a class="btn btn-secondary" href="#buy">Choose Basic</a>
+            <a class="btn btn-secondary" href="https://wa.me/601154198509?text=Hi%20I%27m%20interested%20in%20the%20Basic%20Pack%20for%20Booked%20Detailer">Buy Basic on WhatsApp</a>
           </div>
-          <div class="card price-card featured">
-            <div class="tag">Best Value</div>
+          <div class="price-card featured">
+            <div class="tag">Best value</div>
             <h3>Pack + Bonus Templates</h3>
             <div class="price">RM49</div>
-            <p class="muted">Higher perceived value if you want a stronger offer.</p>
+            <p class="muted">Stronger perceived value and easier positioning.</p>
             <ul class="clean" style="margin:18px 0 24px;">
               <li>Everything in Basic</li>
               <li>Quick-start guide</li>
               <li>Bonus editable templates</li>
-              <li>Better offer positioning</li>
-              <li>Easier to justify the price</li>
+              <li>Better premium positioning</li>
+              <li>Easier higher-price testing</li>
             </ul>
-            <a class="btn btn-primary" href="#buy">Choose RM49 Offer</a>
+            <a class="btn btn-primary" href="https://wa.me/601154198509?text=Hi%20I%27m%20interested%20in%20the%20RM49%20Pack%20for%20Booked%20Detailer">Buy on WhatsApp</a>
           </div>
         </div>
       </div>
@@ -596,15 +437,15 @@ Then I’ll confirm your booking.</div>
 
     <section class="section" id="buy">
       <div class="wrap">
-        <div class="card mini-card" style="padding:32px; text-align:center;">
-          <div class="kicker">Call to action</div>
+        <div class="mini-card" style="padding:34px; text-align:center;">
+          <div class="kicker">Buy now</div>
           <h2>If you already get inquiries, this helps you convert more of them.</h2>
-          <p class="lead" style="margin: 0 auto 24px; max-width: 760px;">The Car Detailing WhatsApp Booking Pack is simple, practical, and ready to use. No fluff. No fake guru tactics. Just better replies, better follow-up, and more booked jobs.</p>
+          <p class="lead" style="margin: 0 auto 24px; max-width: 760px;">Booked Detailer is a premium starter product for detailers who want better replies, cleaner quotes, stronger follow-up, and more booked jobs — without overcomplicating the sales process.</p>
           <div class="hero-actions" style="justify-content:center;">
-            <a class="btn btn-primary" href="#">Buy Now</a>
-            <a class="btn btn-secondary" href="#preview">Preview the Scripts</a>
+            <a class="btn btn-primary" href="https://wa.me/601154198509?text=Hi%20I%27m%20ready%20to%20buy%20Booked%20Detailer">Buy Now on WhatsApp</a>
+            <a class="btn btn-secondary" href="#preview">Preview the scripts</a>
           </div>
-          <p class="small" style="margin-top:16px;">Replace the Buy Now link with your Gumroad, GitHub Pages, checkout link, or contact method.</p>
+          <p class="small" style="margin-top:16px;">WhatsApp button now opens a real order/contact link.</p>
         </div>
       </div>
     </section>
@@ -612,21 +453,21 @@ Then I’ll confirm your booking.</div>
     <section class="section" id="faq">
       <div class="wrap">
         <div class="kicker">FAQ</div>
-        <h2>Questions buyers might ask before purchasing.</h2>
+        <h2>Questions buyers may ask before purchasing.</h2>
         <div class="grid-2" style="margin-top:24px;">
-          <details class="card faq-item" open>
+          <details class="faq-item" open>
             <summary>Is this for beginners?</summary>
-            <p>Yes. It is designed to be simple, practical, and easy to customize even if the seller has never used templates before.</p>
+            <p>Yes. The pack is made to be simple, practical, and easy to customize even if the buyer has never used templates before.</p>
           </details>
-          <details class="card faq-item">
+          <details class="faq-item">
             <summary>Do I need any software?</summary>
-            <p>No. You can use the scripts in WhatsApp, Notes, Google Docs, or anywhere you save quick replies.</p>
+            <p>No. The scripts work in WhatsApp, Notes, Google Docs, or anywhere quick replies can be saved.</p>
           </details>
-          <details class="card faq-item">
+          <details class="faq-item">
             <summary>Will this guarantee more sales?</summary>
-            <p>No honest product can promise that. But it will help the buyer reply faster, communicate more clearly, and stop losing easy bookings because of weak chat handling.</p>
+            <p>No honest product can promise that. But it can help the buyer reply faster, communicate more clearly, and stop losing easy bookings because of weak chat handling.</p>
           </details>
-          <details class="card faq-item">
+          <details class="faq-item">
             <summary>Is it only for mobile detailers?</summary>
             <p>No. It also works for shop-based and home-based detailing businesses.</p>
           </details>
@@ -636,9 +477,12 @@ Then I’ll confirm your booking.</div>
   </main>
 
   <footer class="footer">
-    <div class="wrap">
-      <div><strong>The Car Detailing WhatsApp Booking Pack</strong></div>
-      <div class="small">GitHub Pages-ready draft. Replace the Buy Now link when you're ready to sell.</div>
+    <div class="wrap footer-grid">
+      <div>
+        <strong>Booked Detailer</strong>
+        <div class="small">Premium sales scripts for car detailers.</div>
+      </div>
+      <div class="small">GitHub Pages-ready mini site with live WhatsApp buy buttons.</div>
     </div>
   </footer>
 </body>

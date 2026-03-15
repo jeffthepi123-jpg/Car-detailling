@@ -1,30 +1,37 @@
-# Car Detailing Sales Site
+# Booked Detailer mini site
 
-This folder is ready for GitHub Pages.
+A GitHub Pages-ready mini site for selling **The Car Detailing WhatsApp Booking Pack**.
+
+## Brand
+- **Brand name:** Booked Detailer
+- **Positioning:** Premium sales scripts for car detailers
 
 ## Files
 - `index.html` — main landing page
 
-## How to use
+## Buy button link
+The site is currently wired to WhatsApp:
+- `https://wa.me/601154198509`
 
-### Option 1: GitHub Pages from a repository root
-- Put `index.html` at the repo root
-- Enable GitHub Pages
+Buttons include prefilled messages for different offers.
 
-### Option 2: GitHub Pages from `/docs`
-- Copy this folder into `/docs`
+## How to publish on GitHub Pages
+
+### Option 1: Repository root
+- Put `index.html` in the root of your repo
+- Enable GitHub Pages for the branch
+
+### Option 2: `/docs` folder
+- Copy this folder contents into `/docs`
 - Enable GitHub Pages to serve from `/docs`
 
-### Option 3: Standalone folder preview
-- Open `index.html` in your browser
-
-## Before publishing
-- Replace the `Buy Now` link inside `index.html` with your real checkout link
-- Adjust pricing if needed
-- Add your brand name/contact info if you want
+## Review locally
+- Open `index.html` in a browser
+- Or use a local web server and visit the LAN URL
 
 ## Suggested next upgrades
+- Add a logo SVG
 - Add product mockup image
-- Add real checkout link
-- Add testimonials later only if real
-- Add your logo / brand colors
+- Add a downloadable sample preview PDF
+- Add real testimonials later only if genuine
+- Add favicon and social preview image
