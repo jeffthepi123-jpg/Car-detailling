@@ -1,11 +1,12 @@
-# AI Starter Kit GitHub Pages Site
+# Begin Better GitHub Pages Site
 
-This `/docs` folder publishes the public sales page.
+This `/docs` folder publishes the public sales page for **Begin Better**.
 
 ## Brand
-- **Brand:** AI Starter Kit
-- **Core product:** AI Starter Kit for Beginners
+- **Brand:** Begin Better
+- **Core product:** Begin Better Starter Pack
 - **Audience:** beginners, freelancers, and small business owners
+- **Domain:** https://beginbetter.co
 
 ## Checkout links
 - **RM19:** https://www.paypal.com/ncp/payment/EW9RMR7SH4NX6
@@ -14,16 +15,8 @@ This `/docs` folder publishes the public sales page.
 
 ## Structure
 - `index.html` — landing page with pricing tiers
-
-## Publish with GitHub Pages
-1. Push repo to GitHub
-2. Open repository settings
-3. Go to **Pages**
-4. Set source to:
-   - Branch: main/master branch
-   - Folder: `/docs`
-5. Save
+- `CNAME` — custom domain for GitHub Pages
 
 ## Notes
 - Checkout is handled directly by PayPal payment links.
-- The page is positioned around helping beginners start using AI without technical setup.
+- Positioning is for beginners and small business owners who want practical AI help without technical setup.
