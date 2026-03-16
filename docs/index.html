@@ -57,6 +57,7 @@
     }
     .brand {
       font-weight: 900;
+      font-size: 17px;
       letter-spacing: .2px;
       line-height: 1.05;
       display: flex;
@@ -70,7 +71,7 @@
       color: var(--muted);
       font-weight: 600;
       font-size: 12px;
-      margin-top: 4px;
+      margin-top: 5px;
       line-height: 1.2;
     }
     .nav {
@@ -110,7 +111,7 @@
       margin-bottom:18px;
     }
     h1,h2,h3 { line-height: 1.06; margin: 0 0 16px; }
-    h1 { font-size: clamp(36px, 5.6vw, 60px); letter-spacing: -1.8px; max-width: 9ch; }
+    h1 { font-size: clamp(38px, 5.2vw, 58px); letter-spacing: -1.8px; max-width: 11ch; }
     h2 { font-size: clamp(30px, 4vw, 48px); letter-spacing: -1.4px; }
     h3 { font-size: 24px; }
     .feature-card h3,
@@ -120,7 +121,7 @@
       display: flex;
       align-items: flex-start;
     }
-    .lead { font-size: clamp(16px, 1.8vw, 19px); color: var(--muted); max-width: 640px; }
+    .lead { font-size: clamp(16px, 1.75vw, 18px); color: var(--muted); max-width: 620px; }
     .kicker { color: var(--gold); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; margin-bottom: 10px; }
     .hero { padding: 44px 0 24px; }
     .hero-grid, .grid-2, .grid-3, .pricing-grid, .feature-grid { display:grid; gap:18px; }
@@ -128,12 +129,12 @@
     .grid-3 { align-items: stretch; }
     .feature-grid { align-items: stretch; }
     .pricing-grid { align-items: stretch; }
-    .hero-grid { grid-template-columns: 1.12fr .88fr; align-items:center; gap:20px; }
+    .hero-grid { grid-template-columns: 1fr .92fr; align-items:center; gap:28px; }
     .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
     .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
     .feature-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
     .pricing-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    .hero-points { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:10px; margin:18px 0 16px; }
+    .hero-points { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:10px; margin:18px 0 14px; }
     .card, .point, .price-card, .faq-item, .feature-card, .preview-card {
       background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.022));
       border: 1px solid var(--line);
@@ -146,7 +147,7 @@
       flex-direction: column;
       height: 100%;
     }
-    .point { color:#e7edff; font-size: 15px; line-height: 1.45; }
+    .point { color:#e7edff; font-size: 14px; line-height: 1.4; }
     .hero-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
     .note, .muted { color: var(--muted); }
     ul.clean { list-style:none; padding:0; margin:0; }
@@ -185,15 +186,15 @@
       border:1px solid var(--line); color: var(--muted); padding:8px 11px; border-radius:999px;
       background: rgba(255,255,255,.02); font-size:12px;
     }
-    .mockup { min-height: 340px; display:grid; place-items:center; }
+    .mockup { min-height: 320px; display:grid; place-items:center; }
     .hero-grid > div { min-width: 0; }
     .mockup-box {
-      width:100%; max-width:430px; padding:18px; border-radius:22px;
+      width:100%; max-width:440px; padding:18px; border-radius:22px;
       border:1px solid rgba(229,192,123,.18);
       background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
     }
     .mockup-screen {
-      border-radius:18px; padding:16px; background: rgba(4,8,15,.85); border:1px solid rgba(255,255,255,.06);
+      border-radius:18px; padding:18px; background: rgba(4,8,15,.88); border:1px solid rgba(255,255,255,.06);
     }
     .divider { height:1px; background: var(--line); margin:18px 0; }
     .faq-item { padding:22px; }
@@ -211,6 +212,7 @@
       .hero { padding: 34px 0 20px; }
       h1 { max-width: none; }
       .lead { max-width: none; }
+      .note { max-width: none; }
       .mockup { min-height: auto; }
       .price-card.featured { transform:none; }
       .footer-grid { flex-direction:column; align-items:flex-start; }
@@ -241,6 +243,7 @@
           <div class="eyebrow">A simpler way to start using AI well</div>
           <h1>Practical AI help for beginners and small business owners.</h1>
           <p class="lead">Begin Better gives you a clear starting point with simple guidance, copy-paste prompts, and useful workflows so you can start using AI for real work without the usual overwhelm.</p>
+          <div class="note" style="margin-top:10px;">Built for beginners, freelancers, and small business owners who want practical results fast.</div>
           <div class="hero-points">
             <div class="point">No complicated installation or technical setup.</div>
             <div class="point">Made for normal people, not technical specialists.</div>
