@@ -38,13 +38,13 @@
         linear-gradient(180deg, var(--bg) 0%, #09111d 100%);
     }
     a { color: inherit; text-decoration: none; }
-    .wrap { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
     .section { padding: 72px 0; }
     .section-tight { padding: 48px 0; }
     .topbar {
       position: sticky; top: 0; z-index: 20;
-      backdrop-filter: blur(14px);
-      background: rgba(8,16,27,.72);
+      backdrop-filter: blur(16px);
+      background: rgba(8,16,27,.68);
       border-bottom: 1px solid var(--line);
     }
     .topbar-inner {
@@ -75,12 +75,20 @@
     }
     .nav {
       display: flex;
-      gap: 18px;
+      gap: 20px;
       align-items: center;
       justify-content: flex-end;
       color: var(--muted);
       font-size: 14px;
       flex: 0 0 auto;
+    }
+    .nav a:not(.btn) {
+      opacity: .9;
+      transition: opacity .2s ease, color .2s ease;
+    }
+    .nav a:not(.btn):hover {
+      opacity: 1;
+      color: var(--text);
     }
     .btn {
       display: inline-flex; align-items:center; justify-content:center; gap:10px;
@@ -92,6 +100,7 @@
     .btn:hover { transform: translateY(-1px); }
     .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold2)); color:#17120a; box-shadow: 0 14px 36px rgba(229,192,123,.22); }
     .btn-secondary { background: rgba(255,255,255,.03); color: var(--text); border-color: var(--line); }
+    .btn-secondary:hover { background: rgba(255,255,255,.06); }
     .eyebrow {
       display:inline-flex; align-items:center; gap:10px;
       padding:8px 12px; border-radius:999px;
@@ -101,7 +110,7 @@
       margin-bottom:18px;
     }
     h1,h2,h3 { line-height: 1.06; margin: 0 0 16px; }
-    h1 { font-size: clamp(38px, 6vw, 64px); letter-spacing: -1.8px; max-width: 8.5ch; }
+    h1 { font-size: clamp(36px, 5.6vw, 60px); letter-spacing: -1.8px; max-width: 9ch; }
     h2 { font-size: clamp(30px, 4vw, 48px); letter-spacing: -1.4px; }
     h3 { font-size: 24px; }
     .feature-card h3,
@@ -111,34 +120,34 @@
       display: flex;
       align-items: flex-start;
     }
-    .lead { font-size: clamp(17px, 2vw, 20px); color: var(--muted); max-width: 680px; }
+    .lead { font-size: clamp(16px, 1.8vw, 19px); color: var(--muted); max-width: 640px; }
     .kicker { color: var(--gold); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; margin-bottom: 10px; }
-    .hero { padding: 56px 0 32px; }
+    .hero { padding: 44px 0 24px; }
     .hero-grid, .grid-2, .grid-3, .pricing-grid, .feature-grid { display:grid; gap:18px; }
     .grid-2 { align-items: stretch; }
     .grid-3 { align-items: stretch; }
     .feature-grid { align-items: stretch; }
     .pricing-grid { align-items: stretch; }
-    .hero-grid { grid-template-columns: 1.08fr .92fr; align-items:center; gap:22px; }
+    .hero-grid { grid-template-columns: 1.12fr .88fr; align-items:center; gap:20px; }
     .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
     .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
     .feature-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
     .pricing-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    .hero-points { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px; margin:22px 0 20px; }
+    .hero-points { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:10px; margin:18px 0 16px; }
     .card, .point, .price-card, .faq-item, .feature-card, .preview-card {
       background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.022));
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
-    .card, .point, .price-card, .feature-card, .preview-card { padding: 22px; }
+    .card, .point, .price-card, .feature-card, .preview-card { padding: 20px; }
     .card, .feature-card, .price-card {
       display: flex;
       flex-direction: column;
       height: 100%;
     }
-    .point { color:#e7edff; }
-    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:18px; }
+    .point { color:#e7edff; font-size: 15px; line-height: 1.45; }
+    .hero-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
     .note, .muted { color: var(--muted); }
     ul.clean { list-style:none; padding:0; margin:0; }
     ul.clean li { position:relative; padding-left:28px; margin:10px 0; color:#e2e9ff; }
@@ -156,7 +165,7 @@
     }
     .price { font-size: 52px; font-weight: 900; letter-spacing: -1.6px; margin: 10px 0 8px; }
     .price-card.featured { border-color: rgba(229,192,123,.36); transform: translateY(-4px); }
-    .trust-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+    .trust-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
     .card .lead,
     .card ul.clean,
     .feature-card p,
@@ -173,18 +182,18 @@
       align-self: flex-start;
     }
     .trust-pill {
-      border:1px solid var(--line); color: var(--muted); padding:10px 12px; border-radius:999px;
-      background: rgba(255,255,255,.02); font-size:13px;
+      border:1px solid var(--line); color: var(--muted); padding:8px 11px; border-radius:999px;
+      background: rgba(255,255,255,.02); font-size:12px;
     }
-    .mockup { min-height: 380px; display:grid; place-items:center; }
+    .mockup { min-height: 340px; display:grid; place-items:center; }
     .hero-grid > div { min-width: 0; }
     .mockup-box {
-      width:100%; max-width:460px; padding:22px; border-radius:24px;
+      width:100%; max-width:430px; padding:18px; border-radius:22px;
       border:1px solid rgba(229,192,123,.18);
       background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
     }
     .mockup-screen {
-      border-radius:18px; padding:18px; background: rgba(4,8,15,.85); border:1px solid rgba(255,255,255,.06);
+      border-radius:18px; padding:16px; background: rgba(4,8,15,.85); border:1px solid rgba(255,255,255,.06);
     }
     .divider { height:1px; background: var(--line); margin:18px 0; }
     .faq-item { padding:22px; }
@@ -199,8 +208,9 @@
       .nav { display:none; }
       .topbar-inner { min-height: 58px; padding: 10px 0; }
       .brand-sub { margin-top: 3px; }
-      .hero { padding: 40px 0 24px; }
+      .hero { padding: 34px 0 20px; }
       h1 { max-width: none; }
+      .lead { max-width: none; }
       .mockup { min-height: auto; }
       .price-card.featured { transform:none; }
       .footer-grid { flex-direction:column; align-items:flex-start; }
@@ -229,8 +239,8 @@
       <div class="wrap hero-grid">
         <div>
           <div class="eyebrow">A simpler way to start using AI well</div>
-          <h1>Clear, practical AI help for beginners and small business owners.</h1>
-          <p class="lead">Begin Better gives you a clean starting point: simple guidance, copy-paste prompts, and useful workflows so you can start using AI for real work without getting buried in tools, jargon, or setup headaches.</p>
+          <h1>Practical AI help for beginners and small business owners.</h1>
+          <p class="lead">Begin Better gives you a clear starting point with simple guidance, copy-paste prompts, and useful workflows so you can start using AI for real work without the usual overwhelm.</p>
           <div class="hero-points">
             <div class="point">No complicated installation or technical setup.</div>
             <div class="point">Made for normal people, not technical specialists.</div>
