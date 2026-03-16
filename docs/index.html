@@ -3,25 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Begin Better — Simple AI for Beginners & Small Business Owners</title>
-  <meta name="description" content="Begin Better helps beginners and small business owners start using AI in a practical way with clear guides, copy-paste prompts, simple workflows, and no technical setup headaches.">
-  <meta property="og:title" content="Begin Better — Simple AI for Beginners & Small Business Owners">
-  <meta property="og:description" content="A clean beginner-friendly AI starter pack with prompts, workflows, and practical use cases.">
+  <title>Begin Better — Practical AI for Beginners & Small Business Owners</title>
+  <meta name="description" content="Begin Better helps beginners and small business owners start using AI in a practical way with clear guides, copy-paste prompts, useful workflows, and no technical setup headache.">
+  <meta property="og:title" content="Begin Better — Practical AI for Beginners & Small Business Owners">
+  <meta property="og:description" content="A practical starter pack for people who want to use AI for real work without getting overwhelmed.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://beginbetter.co/">
   <meta name="theme-color" content="#0b1020">
   <style>
     :root {
-      --bg: #08101b;
-      --bg2: #0d1526;
-      --panel: rgba(17, 24, 39, 0.74);
+      --bg: #07101a;
+      --bg-2: #0c1625;
+      --panel: rgba(255,255,255,.035);
+      --panel-2: rgba(255,255,255,.05);
       --text: #f5f7ff;
-      --muted: #b7c2dd;
-      --line: rgba(255,255,255,0.08);
-      --gold: #e5c07b;
-      --gold2: #f4d597;
+      --muted: #bac6e0;
+      --line: rgba(255,255,255,.085);
+      --gold: #e6c27e;
+      --gold-2: #f5d89d;
       --green: #7ee0c3;
-      --shadow: 0 24px 80px rgba(0,0,0,.42);
+      --shadow: 0 30px 90px rgba(0,0,0,.38);
       --radius: 24px;
       --max: 1160px;
     }
@@ -33,27 +34,28 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
       background:
-        radial-gradient(circle at top left, rgba(125,181,255,.14), transparent 24%),
-        radial-gradient(circle at top right, rgba(229,192,123,.12), transparent 26%),
+        radial-gradient(circle at top left, rgba(125,181,255,.11), transparent 24%),
+        radial-gradient(circle at top right, rgba(230,194,126,.10), transparent 26%),
         linear-gradient(180deg, var(--bg) 0%, #09111d 100%);
     }
     a { color: inherit; text-decoration: none; }
     .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
-    .section { padding: 72px 0; }
-    .section-tight { padding: 48px 0; }
+    .section { padding: 82px 0; }
+    .section-tight { padding: 54px 0; }
     .topbar {
-      position: sticky; top: 0; z-index: 20;
+      position: sticky;
+      top: 0;
+      z-index: 30;
       backdrop-filter: blur(16px);
-      background: rgba(8,16,27,.68);
+      background: rgba(7,16,26,.68);
       border-bottom: 1px solid var(--line);
     }
     .topbar-inner {
-      min-height: 64px;
+      min-height: 68px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      padding: 8px 0;
     }
     .brand {
       font-weight: 900;
@@ -62,160 +64,211 @@
       line-height: 1.05;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      flex: 1 1 auto;
-      min-width: 0;
     }
     .brand-sub {
-      display:block;
+      display: block;
       color: var(--muted);
-      font-weight: 600;
       font-size: 12px;
+      font-weight: 600;
       margin-top: 5px;
       line-height: 1.2;
     }
     .nav {
       display: flex;
-      gap: 20px;
       align-items: center;
-      justify-content: flex-end;
+      gap: 20px;
       color: var(--muted);
       font-size: 14px;
-      flex: 0 0 auto;
     }
-    .nav a:not(.btn) {
-      opacity: .9;
-      transition: opacity .2s ease, color .2s ease;
-    }
-    .nav a:not(.btn):hover {
-      opacity: 1;
-      color: var(--text);
-    }
+    .nav a:not(.btn) { opacity: .9; transition: .2s ease; }
+    .nav a:not(.btn):hover { opacity: 1; color: var(--text); }
     .btn {
-      display: inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding: 12px 18px; border-radius: 14px; border: 1px solid transparent;
-      font-weight: 800; transition: .2s ease; cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      font-weight: 800;
       line-height: 1;
       white-space: nowrap;
+      transition: .2s ease;
+      cursor: pointer;
     }
     .btn:hover { transform: translateY(-1px); }
-    .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold2)); color:#17120a; box-shadow: 0 14px 36px rgba(229,192,123,.22); }
-    .btn-secondary { background: rgba(255,255,255,.03); color: var(--text); border-color: var(--line); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #17120a;
+      box-shadow: 0 14px 36px rgba(230,194,126,.22);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      border-color: var(--line);
+    }
     .btn-secondary:hover { background: rgba(255,255,255,.06); }
     .eyebrow {
-      display:inline-flex; align-items:center; gap:10px;
-      padding:8px 12px; border-radius:999px;
-      background: rgba(229,192,123,.08);
-      border: 1px solid rgba(229,192,123,.18);
-      color:#f0d6a4; font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
-      margin-bottom:18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(230,194,126,.08);
+      border: 1px solid rgba(230,194,126,.18);
+      color: #f0d6a4;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
     }
-    h1,h2,h3 { line-height: 1.06; margin: 0 0 16px; }
-    h1 { font-size: clamp(38px, 5.2vw, 58px); letter-spacing: -1.8px; max-width: 11ch; }
-    h2 { font-size: clamp(30px, 4vw, 48px); letter-spacing: -1.4px; }
+    h1,h2,h3,h4 { line-height: 1.04; margin: 0 0 16px; }
+    h1 {
+      font-size: clamp(40px, 6vw, 68px);
+      letter-spacing: -2px;
+      max-width: 11ch;
+    }
+    h2 {
+      font-size: clamp(30px, 4vw, 50px);
+      letter-spacing: -1.3px;
+    }
     h3 { font-size: 24px; }
-    .feature-card h3,
-    .price-card h3,
-    .card h3 {
-      min-height: 2.3em;
-      display: flex;
-      align-items: flex-start;
+    .lead {
+      font-size: clamp(17px, 1.9vw, 20px);
+      color: var(--muted);
+      max-width: 650px;
     }
-    .lead { font-size: clamp(16px, 1.75vw, 18px); color: var(--muted); max-width: 620px; }
-    .kicker { color: var(--gold); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; margin-bottom: 10px; }
-    .hero { padding: 44px 0 24px; }
-    .hero-grid, .grid-2, .grid-3, .pricing-grid, .feature-grid { display:grid; gap:18px; }
-    .grid-2 { align-items: stretch; }
-    .grid-3 { align-items: stretch; }
-    .feature-grid { align-items: stretch; }
-    .pricing-grid { align-items: stretch; }
-    .hero-grid { grid-template-columns: 1fr .92fr; align-items:center; gap:28px; }
-    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    .feature-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
-    .pricing-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    .hero-points { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:10px; margin:18px 0 14px; }
-    .card, .point, .price-card, .faq-item, .feature-card, .preview-card {
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.022));
+    .small { font-size: 13px; color: var(--muted); }
+    .muted { color: var(--muted); }
+    .kicker {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      margin-bottom: 10px;
+    }
+    .hero { padding: 52px 0 30px; }
+    .hero-grid, .grid-2, .grid-3, .pricing-grid, .feature-grid, .proof-grid {
+      display: grid;
+      gap: 18px;
+    }
+    .hero-grid { grid-template-columns: 1.06fr .94fr; align-items: center; gap: 28px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); align-items: stretch; }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); align-items: stretch; }
+    .feature-grid { grid-template-columns: repeat(4, minmax(0,1fr)); align-items: stretch; }
+    .pricing-grid { grid-template-columns: repeat(3, minmax(0,1fr)); align-items: stretch; }
+    .proof-grid { grid-template-columns: 1.1fr .9fr; align-items: stretch; }
+    .hero-points { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 18px 0 14px; }
+    .card, .point, .price-card, .feature-card, .preview-card, .faq-item, .quote-card {
+      background: linear-gradient(180deg, var(--panel-2), var(--panel));
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
-    .card, .point, .price-card, .feature-card, .preview-card { padding: 20px; }
-    .card, .feature-card, .price-card {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    .point { color:#e7edff; font-size: 14px; line-height: 1.4; }
-    .hero-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
-    .note, .muted { color: var(--muted); }
-    ul.clean { list-style:none; padding:0; margin:0; }
-    ul.clean li { position:relative; padding-left:28px; margin:10px 0; color:#e2e9ff; }
-    ul.clean li::before { content:"✓"; position:absolute; left:0; color:var(--green); font-weight:900; }
+    .card, .point, .price-card, .feature-card, .preview-card, .quote-card { padding: 22px; }
+    .card, .feature-card, .price-card { display: flex; flex-direction: column; height: 100%; }
+    .point { color: #e7edff; font-size: 14px; line-height: 1.4; }
+    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+    .note { color: var(--muted); margin-top: 10px; }
+    ul.clean { list-style: none; padding: 0; margin: 0; }
+    ul.clean li { position: relative; padding-left: 28px; margin: 10px 0; color: #e2e9ff; }
+    ul.clean li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 900; }
     .feature-num {
-      width:38px; height:38px; border-radius:12px; display:grid; place-items:center;
-      margin-bottom:14px; background: rgba(229,192,123,.08); border:1px solid rgba(229,192,123,.2);
-      color:var(--gold); font-weight:800;
+      width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center;
+      margin-bottom: 14px;
+      background: rgba(230,194,126,.08);
+      border: 1px solid rgba(230,194,126,.2);
+      color: var(--gold);
+      font-weight: 800;
     }
     .tag {
-      display:inline-block; padding:6px 10px; border-radius:999px;
-      background: rgba(229,192,123,.1); color: var(--gold);
-      font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; margin-bottom:12px;
+      display: inline-block;
       align-self: flex-start;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(230,194,126,.1);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
     }
     .price { font-size: 52px; font-weight: 900; letter-spacing: -1.6px; margin: 10px 0 8px; }
-    .price-card.featured { border-color: rgba(229,192,123,.36); transform: translateY(-4px); }
-    .trust-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
-    .card .lead,
-    .card ul.clean,
-    .feature-card p,
-    .price-card p,
-    .price-card ul.clean {
-      margin-bottom: 0;
-    }
-    .card ul.clean,
-    .price-card ul.clean {
-      flex: 1 1 auto;
-    }
-    .price-card .btn {
-      margin-top: auto;
-      align-self: flex-start;
-    }
+    .price-card.featured { border-color: rgba(230,194,126,.36); transform: translateY(-4px); }
+    .price-card ul.clean { flex: 1 1 auto; }
+    .price-card .btn { margin-top: auto; align-self: flex-start; }
+    .trust-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .trust-pill {
-      border:1px solid var(--line); color: var(--muted); padding:8px 11px; border-radius:999px;
-      background: rgba(255,255,255,.02); font-size:12px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.02);
+      font-size: 12px;
     }
-    .mockup { min-height: 320px; display:grid; place-items:center; }
-    .hero-grid > div { min-width: 0; }
+    .preview-card { align-self: center; }
+    .mockup { min-height: 360px; display: grid; place-items: center; }
     .mockup-box {
-      width:100%; max-width:440px; padding:18px; border-radius:22px;
-      border:1px solid rgba(229,192,123,.18);
+      width: 100%;
+      max-width: 440px;
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid rgba(230,194,126,.18);
       background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
     }
     .mockup-screen {
-      border-radius:18px; padding:18px; background: rgba(4,8,15,.88); border:1px solid rgba(255,255,255,.06);
+      border-radius: 18px;
+      padding: 18px;
+      background: rgba(4,8,15,.88);
+      border: 1px solid rgba(255,255,255,.06);
     }
-    .divider { height:1px; background: var(--line); margin:18px 0; }
-    .faq-item { padding:22px; }
-    .faq-item summary { cursor:pointer; list-style:none; font-weight:800; }
-    .faq-item summary::-webkit-details-marker { display:none; }
-    .faq-item[open] summary { margin-bottom:10px; }
-    .footer { padding: 36px 0 56px; color: var(--muted); font-size: 14px; }
-    .footer-grid { display:flex; justify-content:space-between; gap:16px; align-items:center; }
-    .small { font-size:13px; color: var(--muted); }
+    .mini-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .mini-meta span {
+      font-size: 12px;
+      color: var(--muted);
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--line);
+    }
+    .section-band {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(230,194,126,.06), rgba(125,181,255,.05));
+    }
+    .quote-card p { margin: 0; color: #e8eeff; }
+    .faq-item { padding: 22px; }
+    .faq-item summary { cursor: pointer; list-style: none; font-weight: 800; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item[open] summary { margin-bottom: 10px; }
+    .footer {
+      padding: 36px 0 56px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+    }
     @media (max-width: 960px) {
-      .hero-grid, .grid-2, .grid-3, .pricing-grid, .feature-grid, .hero-points { grid-template-columns: 1fr; }
-      .nav { display:none; }
-      .topbar-inner { min-height: 58px; padding: 10px 0; }
-      .brand-sub { margin-top: 3px; }
-      .hero { padding: 34px 0 20px; }
+      .hero-grid, .grid-2, .grid-3, .pricing-grid, .feature-grid, .proof-grid, .hero-points { grid-template-columns: 1fr; }
+      .nav { display: none; }
+      .hero { padding: 38px 0 22px; }
       h1 { max-width: none; }
-      .lead { max-width: none; }
-      .note { max-width: none; }
+      .lead, .note { max-width: none; }
       .mockup { min-height: auto; }
-      .price-card.featured { transform:none; }
-      .footer-grid { flex-direction:column; align-items:flex-start; }
+      .price-card.featured { transform: none; }
+      .footer-grid { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -224,10 +277,9 @@
     <div class="wrap topbar-inner">
       <div class="brand">
         Begin Better
-        <span class="brand-sub">Simple AI for beginners and small business owners</span>
+        <span class="brand-sub">Practical AI for beginners and small business owners</span>
       </div>
       <nav class="nav">
-        <a href="#benefits">Benefits</a>
         <a href="#inside">Inside</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
@@ -242,16 +294,16 @@
         <div>
           <div class="eyebrow">A simpler way to start using AI well</div>
           <h1>Practical AI help for beginners and small business owners.</h1>
-          <p class="lead">Begin Better gives you a clear starting point with simple guidance, copy-paste prompts, and useful workflows so you can start using AI for real work without the usual overwhelm.</p>
-          <div class="note" style="margin-top:10px;">Built for beginners, freelancers, and small business owners who want practical results fast.</div>
+          <p class="lead">Begin Better is a straightforward starter pack for people who want to use AI for real work — writing, planning, research, communication, and simple business tasks — without getting buried in hype, jargon, or technical setup.</p>
+          <div class="note">Clear guidance. Copy-paste prompts. Useful workflows. Fast wins.</div>
           <div class="hero-points">
             <div class="point">No complicated installation or technical setup.</div>
-            <div class="point">Made for normal people, not technical specialists.</div>
-            <div class="point">Useful for writing, planning, research, and everyday business tasks.</div>
-            <div class="point">Designed to help you get useful fast, not study forever.</div>
+            <div class="point">Made for normal people, not AI specialists.</div>
+            <div class="point">Useful for work, business, study, and daily tasks.</div>
+            <div class="point">Built to get you useful quickly, not overwhelm you.</div>
           </div>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#pricing">Choose Your Pack</a>
+            <a class="btn btn-primary" href="https://www.paypal.com/ncp/payment/UVY85SM3ZY5W2">Get the Starter Pack</a>
             <a class="btn btn-secondary" href="#inside">See What’s Inside</a>
           </div>
           <div class="trust-row">
@@ -261,20 +313,25 @@
             <div class="trust-pill">PayPal checkout</div>
           </div>
         </div>
-        <div class="preview-card mockup" style="align-self:center;">
+
+        <div class="preview-card mockup">
           <div class="mockup-box">
             <div class="mockup-screen">
-              <div class="tag">Inside Begin Better</div>
+              <div class="tag">Begin Better Starter Pack</div>
               <h3>What buyers get</h3>
-              <ul class="clean">
-                <li>A simple starter guide</li>
-                <li>Copy-paste prompts for daily tasks</li>
+              <p class="muted">A compact, practical pack designed to help someone move from AI-curious to AI-useful fast.</p>
+              <ul class="clean" style="margin-top:16px;">
+                <li>Simple beginner guide</li>
+                <li>Copy-paste prompts for real tasks</li>
                 <li>Easy workflows for work and business</li>
-                <li>Tool recommendations without overwhelm</li>
-                <li>Practical examples for beginners</li>
+                <li>Tool guidance without overwhelm</li>
+                <li>Small business examples that actually matter</li>
               </ul>
-              <div class="divider"></div>
-              <p class="muted" style="margin:0;">Built to help people stop overthinking AI and start using it in a practical, profitable way.</p>
+              <div class="mini-meta">
+                <span>Instant download</span>
+                <span>For beginners</span>
+                <span>RM49 main offer</span>
+              </div>
             </div>
           </div>
         </div>
@@ -283,53 +340,40 @@
 
     <section class="section-tight">
       <div class="wrap feature-grid">
-        <div class="feature-card"><div class="feature-num">01</div><h3>Understand what matters</h3><p>Get a plain-language explanation of what AI is useful for and what you can ignore for now.</p></div>
-        <div class="feature-card"><div class="feature-num">02</div><h3>Use prompts that already work</h3><p>Skip the blank page problem with starter prompts for writing, planning, research, and communication.</p></div>
-        <div class="feature-card"><div class="feature-num">03</div><h3>Use AI for real tasks</h3><p>Apply AI to daily work, study, admin, messages, content, and light business operations.</p></div>
-        <div class="feature-card"><div class="feature-num">04</div><h3>Build confidence quickly</h3><p>Start getting small wins fast so AI feels practical instead of confusing.</p></div>
-      </div>
-    </section>
-
-    <section class="section" id="benefits">
-      <div class="wrap grid-2">
-        <div class="card">
-          <div class="kicker">The common problem</div>
-          <h2>Most people don’t need more AI content. They need a clearer starting point.</h2>
-          <p class="lead">The internet is full of tutorials, tool lists, and hype. That sounds helpful, but for beginners it often creates more confusion than progress.</p>
-          <ul class="clean">
-            <li>Too many tools and no clear first step</li>
-            <li>Too much jargon and technical noise</li>
-            <li>Too many tutorials with no practical action</li>
-            <li>No easy bridge from curiosity to daily usage</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="kicker">What Begin Better changes</div>
-          <h2>It gives buyers a calm, useful entry point.</h2>
-          <ul class="clean">
-            <li>Know where to start without feeling lost</li>
-            <li>Get prompts you can use immediately</li>
-            <li>Understand where AI helps in real life and business</li>
-            <li>Learn without needing technical installation</li>
-            <li>Move from confusion to confident action faster</li>
-          </ul>
-        </div>
+        <div class="feature-card"><div class="feature-num">01</div><h3>Understand what matters</h3><p class="muted">Learn what AI is actually useful for and ignore the noise that slows beginners down.</p></div>
+        <div class="feature-card"><div class="feature-num">02</div><h3>Use prompts that already work</h3><p class="muted">Start with prompt patterns that help with writing, planning, research, and customer communication.</p></div>
+        <div class="feature-card"><div class="feature-num">03</div><h3>Use AI for real tasks</h3><p class="muted">Apply AI to work, study, admin, content, and small business operations right away.</p></div>
+        <div class="feature-card"><div class="feature-num">04</div><h3>Build confidence fast</h3><p class="muted">Get early wins quickly so AI feels practical and useful instead of confusing.</p></div>
       </div>
     </section>
 
     <section class="section" id="inside">
       <div class="wrap">
-        <div class="kicker">What’s inside</div>
-        <h2>A focused starter pack designed for immediate use.</h2>
-        <div class="grid-3" style="margin-top:24px;">
-          <div class="card"><h3>Starter guide</h3><p class="muted">A clear walkthrough for beginners: what AI is good at, where to start, and how to avoid wasting time on the wrong things.</p></div>
-          <div class="card"><h3>Prompt library</h3><p class="muted">Copy-paste prompts for writing, summarizing, brainstorming, customer communication, planning, research, and content creation.</p></div>
-          <div class="card"><h3>Simple workflows</h3><p class="muted">Step-by-step examples that show how to use AI for actual outcomes instead of endless experimentation.</p></div>
+        <div class="kicker">What this is</div>
+        <h2>A practical starter pack, not another pile of AI theory.</h2>
+        <div class="proof-grid" style="margin-top:24px;">
+          <div class="card">
+            <p class="lead">Most beginners do not need more tutorials. They need a cleaner starting point.</p>
+            <ul class="clean">
+              <li>Too many tools and no clear first step</li>
+              <li>Too much jargon and technical noise</li>
+              <li>Too many videos with no practical action</li>
+              <li>No simple bridge from curiosity to daily usage</li>
+            </ul>
+          </div>
+          <div class="quote-card">
+            <div class="kicker">The promise</div>
+            <p>Begin Better gives buyers a calm, useful path into AI: clear guidance, strong starter prompts, practical workflows, and business-friendly examples they can use immediately.</p>
+          </div>
         </div>
-        <div class="grid-2" style="margin-top:18px;">
-          <div class="card"><h3>Tool recommendations</h3><p class="muted">A practical cheat sheet for choosing useful tools without drowning in options or chasing every new platform.</p></div>
-          <div class="card"><h3>Business-friendly use cases</h3><p class="muted">Examples for small business owners who want help with messaging, admin, planning, research, offers, and simple content tasks.</p></div>
-        </div>
+      </div>
+    </section>
+
+    <section class="section-tight section-band">
+      <div class="wrap grid-3">
+        <div class="card"><div class="kicker">Guide</div><h3>Starter guide</h3><p class="muted">A simple explanation of where to start, what AI is good at, and how to avoid wasting time.</p></div>
+        <div class="card"><div class="kicker">Prompts</div><h3>Prompt library</h3><p class="muted">Copy-paste prompts for writing, research, planning, communication, and daily productivity.</p></div>
+        <div class="card"><div class="kicker">Workflows</div><h3>Practical workflows</h3><p class="muted">Step-by-step examples that show how to use AI for actual outcomes instead of endless experimenting.</p></div>
       </div>
     </section>
 
@@ -337,21 +381,21 @@
       <div class="wrap grid-2">
         <div class="card">
           <div class="kicker">Best for</div>
-          <h2>Who this is actually for</h2>
+          <h2>Who this is for</h2>
           <ul class="clean">
             <li>Beginners who want a simple first step</li>
-            <li>Freelancers who want faster work output</li>
+            <li>Freelancers who want faster output</li>
             <li>Small business owners who want practical help</li>
-            <li>People who feel overwhelmed by too many AI options</li>
+            <li>People overwhelmed by too many AI options</li>
           </ul>
         </div>
         <div class="card">
-          <div class="kicker">Not for</div>
-          <h2>Who this is not trying to be</h2>
+          <div class="kicker">Not trying to be</div>
+          <h2>What this is not</h2>
           <ul class="clean">
             <li>Not a coding course</li>
             <li>Not a heavy technical training product</li>
-            <li>Not another hype-filled “get rich with AI” promise</li>
+            <li>Not another hypey “get rich with AI” promise</li>
             <li>Not built for advanced AI specialists</li>
           </ul>
         </div>
@@ -376,6 +420,7 @@
             </ul>
             <a class="btn btn-secondary" href="https://www.paypal.com/ncp/payment/EW9RMR7SH4NX6">Buy RM19</a>
           </div>
+
           <div class="price-card featured">
             <div class="tag">Best value</div>
             <h3>Begin Better Starter Pack</h3>
@@ -390,11 +435,12 @@
             </ul>
             <a class="btn btn-primary" href="https://www.paypal.com/ncp/payment/UVY85SM3ZY5W2">Buy RM49</a>
           </div>
+
           <div class="price-card">
             <div class="tag">Bundle</div>
             <h3>Begin Better Complete Bundle</h3>
             <div class="price">RM99</div>
-            <p class="muted">For buyers who want the fullest version with more depth and business use.</p>
+            <p class="muted">For buyers who want more depth, more templates, and more business-focused use.</p>
             <ul class="clean" style="margin:18px 0 24px;">
               <li>Everything in RM49</li>
               <li>Extra templates</li>
@@ -408,17 +454,21 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="wrap">
-        <div class="card" style="padding:34px; text-align:center;">
-          <div class="kicker">Simple promise</div>
+    <section class="section-tight section-band">
+      <div class="wrap grid-2" style="align-items:center;">
+        <div>
+          <div class="kicker">Fast result</div>
           <h2>Start with the useful side of AI. Skip the chaos.</h2>
-          <p class="lead" style="margin: 0 auto 24px; max-width: 760px;">Begin Better is designed to help ordinary people use AI in a practical, grounded way. Clearer than random tutorials. Easier than heavy courses. More useful than hype.</p>
-          <div class="hero-actions" style="justify-content:center;">
-            <a class="btn btn-primary" href="https://www.paypal.com/ncp/payment/UVY85SM3ZY5W2">Get the RM49 Starter Pack</a>
-            <a class="btn btn-secondary" href="#faq">Read FAQ</a>
+          <p class="lead">Begin Better is designed to help ordinary people use AI in a grounded, practical way. Clearer than random tutorials. Easier than heavy courses. More useful than hype.</p>
+        </div>
+        <div class="card">
+          <div class="kicker">Most recommended</div>
+          <h3>Start with the RM49 Starter Pack</h3>
+          <p class="muted">It gives the best balance of simplicity, useful prompts, practical workflows, and business-friendly examples for most buyers.</p>
+          <div class="hero-actions" style="margin-top:18px;">
+            <a class="btn btn-primary" href="https://www.paypal.com/ncp/payment/UVY85SM3ZY5W2">Get the RM49 Pack</a>
+            <a class="btn btn-secondary" href="#pricing">Compare all tiers</a>
           </div>
-          <p class="small" style="margin-top:16px;">Secure checkout is handled by PayPal.</p>
         </div>
       </div>
     </section>
@@ -428,10 +478,10 @@
         <div class="kicker">FAQ</div>
         <h2>Questions buyers may ask before purchasing.</h2>
         <div class="grid-2" style="margin-top:24px;">
-          <details class="faq-item" open><summary>Is this for complete beginners?</summary><p>Yes. Begin Better is designed specifically for people who want to use AI but do not know where to start.</p></details>
-          <details class="faq-item"><summary>Do I need to install complicated software?</summary><p>No. The goal is to help buyers start using AI without technical setup headaches.</p></details>
-          <details class="faq-item"><summary>Who is this best for?</summary><p>Beginners, freelancers, office workers, and small business owners who want practical AI help they can use quickly.</p></details>
-          <details class="faq-item"><summary>Will this make me an AI expert?</summary><p>No. It is meant to make you useful and confident faster, not turn you into a technical specialist overnight.</p></details>
+          <details class="faq-item" open><summary>Is this for complete beginners?</summary><p class="muted">Yes. Begin Better is designed specifically for people who want to use AI but do not know where to start.</p></details>
+          <details class="faq-item"><summary>Do I need to install complicated software?</summary><p class="muted">No. The goal is to help buyers start using AI without technical setup headaches.</p></details>
+          <details class="faq-item"><summary>Who is this best for?</summary><p class="muted">Beginners, freelancers, office workers, and small business owners who want practical AI help they can use quickly.</p></details>
+          <details class="faq-item"><summary>Will this make me an AI expert?</summary><p class="muted">No. It is meant to make you useful and confident faster, not turn you into a technical specialist overnight.</p></details>
         </div>
       </div>
     </section>
@@ -439,7 +489,10 @@
 
   <footer class="footer">
     <div class="wrap footer-grid">
-      <div><strong>Begin Better</strong><div class="small">Simple AI for beginners and small business owners.</div></div>
+      <div>
+        <strong>Begin Better</strong>
+        <div class="small">Practical AI for beginners and small business owners.</div>
+      </div>
       <div class="small">beginbetter.co • PayPal checkout • RM19 / RM49 / RM99</div>
     </div>
   </footer>
