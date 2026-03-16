@@ -1,39 +1,45 @@
-# Launch Status — Booked Detailer
+# Launch Status — Begin Better
 
 ## Product chosen
-**Booked Detailer — The Car Detailing WhatsApp Booking Pack**
+**Begin Better — Simple AI for Beginners & Small Business Owners**
 
 ## Why this format
-Fastest legitimate product to create and sell overnight:
+Fastest legitimate product to create and sell:
 - digital product
 - no inventory
 - no fulfillment complexity beyond manual delivery
-- clear niche buyer
-- can be sold from a simple landing page with WhatsApp ordering
+- broad demand from beginners and small business owners
+- can be sold from a simple landing page with direct PayPal checkout
 
 ## Public sales asset
 Live sales page:
-https://jeffthepi123-jpg.github.io/Car-detailling/
+https://beginbetter.co/
 
-## Offer
-- RM29 Starter
-- RM49 Complete Pack
+## Offers
+- RM19 — Begin Better Mini
+- RM49 — Begin Better Starter Pack
+- RM99 — Begin Better Complete Bundle
 
-Recommended first offer: **RM49 Complete Pack**
+Recommended first offer to push: **RM49 — Begin Better Starter Pack**
 
 ## Order flow
-1. Buyer lands on the GitHub Pages site
-2. Buyer taps the WhatsApp buy button
-3. Seller collects payment manually
-4. Seller delivers the zip file manually
+1. Buyer lands on the sales page
+2. Buyer taps the PayPal checkout link
+3. Seller verifies payment
+4. Seller delivers the matching zip file manually
 
 ## Important repo decision
-The actual customer product bundle was moved out of the public repo into a local ignored folder so the product is not exposed for free.
+The actual customer product bundles are kept in a local ignored folder so the product is not exposed for free.
 
 Local private bundle location:
-`private-products/booked-detailer-pack/`
+`private-products/begin-better/`
+
+## Current fulfillment files
+- `begin-better-mini-rm19.zip`
+- `begin-better-starter-pack-rm49.zip`
+- `begin-better-complete-bundle-rm99.zip`
 
 ## Next actions for scale
-- add payment automation only if payment credentials become available
-- add niche variants: tinting, coating, polishing, bike detailing
 - add testimonials after first buyers
+- refine product contents based on real buyer questions
+- automate fulfillment only if payment/delivery credentials become available
