@@ -1,32 +1,29 @@
-# Booked Detailer GitHub Pages Site
+# AI Starter Kit GitHub Pages Site
 
-This `/docs` folder is ready for GitHub Pages publishing.
+This `/docs` folder publishes the public sales page.
 
 ## Brand
-- **Brand:** Booked Detailer
-- **Product:** The Car Detailing WhatsApp Booking Pack
-- **Buy link:** WhatsApp (`https://wa.me/601154198509`)
+- **Brand:** AI Starter Kit
+- **Core product:** AI Starter Kit for Beginners
+- **Audience:** beginners, freelancers, and small business owners
+
+## Checkout links
+- **RM19:** https://www.paypal.com/ncp/payment/EW9RMR7SH4NX6
+- **RM49:** https://www.paypal.com/ncp/payment/UVY85SM3ZY5W2
+- **RM99:** https://www.paypal.com/ncp/payment/FNYFBZQHMRX8Q
 
 ## Structure
-- `index.html` — landing page
-- `assets/booked-detailer-logo.svg` — logo
-- `assets/product-mockup.svg` — hero mockup / social preview asset
+- `index.html` — landing page with pricing tiers
 
 ## Publish with GitHub Pages
-1. Push this repo to GitHub
+1. Push repo to GitHub
 2. Open repository settings
 3. Go to **Pages**
 4. Set source to:
-   - Branch: your main branch
+   - Branch: main/master branch
    - Folder: `/docs`
 5. Save
 
-GitHub will give you a public URL.
-
-## Review locally
-- Open `docs/index.html` in a browser
-- Or serve the repo locally and open `/docs/`
-
 ## Notes
-- The buy buttons already point to WhatsApp with prefilled messages.
-- You can later replace the WhatsApp links with Gumroad, Stripe, Payhip, or any checkout URL.
+- Checkout is handled directly by PayPal payment links.
+- The page is positioned around helping beginners start using AI without technical setup.
