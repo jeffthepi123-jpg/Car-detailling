@@ -207,6 +207,29 @@ Think of it like a human reviewing their journal and updating their mental model
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
 
+## Product Shipping Rule
+
+When building a sellable digital product, lock the offer ladder **before** polishing the sales page.
+
+Minimum order:
+1. define audience clearly
+2. define the promise/result clearly
+3. define the value ladder for each tier
+4. define what delivery looks like after payment
+5. only then polish the landing page/design
+
+### Quick Product Checklist
+
+Before spending time on visual polish, confirm:
+- Who is this for?
+- What problem does it solve?
+- What result does it promise honestly?
+- Why would someone buy RM19 vs RM49 vs RM99?
+- What exactly is delivered after payment?
+- Is the private product bundle protected from the public repo?
+
+If any of those are fuzzy, fix that first. Better offer clarity beats prettier layout.
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
