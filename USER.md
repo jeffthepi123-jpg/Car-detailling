@@ -14,7 +14,10 @@ _Learn about the person you're helping. Update this as you go._
 
 ## Context
 
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+- Interested in sellable digital products.
+- Prefers practical ideas with broad demand.
+- Current preferred product direction: helping beginners adopt AI or hire AI without technical setup.
+- Plans to provide a PayPal link later for payment setup.
 
 ---
 
