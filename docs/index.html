@@ -104,10 +104,21 @@
     h1 { font-size: clamp(42px, 7vw, 74px); letter-spacing: -2px; }
     h2 { font-size: clamp(30px, 4vw, 48px); letter-spacing: -1.4px; }
     h3 { font-size: 24px; }
+    .feature-card h3,
+    .price-card h3,
+    .card h3 {
+      min-height: 2.3em;
+      display: flex;
+      align-items: flex-start;
+    }
     .lead { font-size: clamp(18px, 2.3vw, 22px); color: var(--muted); max-width: 760px; }
     .kicker { color: var(--gold); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; margin-bottom: 10px; }
     .hero { padding: 84px 0 56px; }
     .hero-grid, .grid-2, .grid-3, .pricing-grid, .feature-grid { display:grid; gap:18px; }
+    .grid-2 { align-items: stretch; }
+    .grid-3 { align-items: stretch; }
+    .feature-grid { align-items: stretch; }
+    .pricing-grid { align-items: stretch; }
     .hero-grid { grid-template-columns: 1.05fr .95fr; align-items:center; gap:28px; }
     .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
     .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
@@ -121,6 +132,11 @@
       box-shadow: var(--shadow);
     }
     .card, .point, .price-card, .feature-card, .preview-card { padding: 24px; }
+    .card, .feature-card, .price-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
     .point { color:#e7edff; }
     .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
     .note, .muted { color: var(--muted); }
@@ -136,15 +152,32 @@
       display:inline-block; padding:6px 10px; border-radius:999px;
       background: rgba(229,192,123,.1); color: var(--gold);
       font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; margin-bottom:12px;
+      align-self: flex-start;
     }
     .price { font-size: 52px; font-weight: 900; letter-spacing: -1.6px; margin: 10px 0 8px; }
     .price-card.featured { border-color: rgba(229,192,123,.36); transform: translateY(-4px); }
     .trust-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:18px; }
+    .card .lead,
+    .card ul.clean,
+    .feature-card p,
+    .price-card p,
+    .price-card ul.clean {
+      margin-bottom: 0;
+    }
+    .card ul.clean,
+    .price-card ul.clean {
+      flex: 1 1 auto;
+    }
+    .price-card .btn {
+      margin-top: auto;
+      align-self: flex-start;
+    }
     .trust-pill {
       border:1px solid var(--line); color: var(--muted); padding:10px 12px; border-radius:999px;
       background: rgba(255,255,255,.02); font-size:13px;
     }
     .mockup { min-height: 460px; display:grid; place-items:center; }
+    .hero-grid > div { min-width: 0; }
     .mockup-box {
       width:100%; max-width:500px; padding:28px; border-radius:28px;
       border:1px solid rgba(229,192,123,.18);
@@ -212,7 +245,7 @@
             <div class="trust-pill">PayPal checkout</div>
           </div>
         </div>
-        <div class="preview-card mockup">
+        <div class="preview-card mockup" style="align-self:center;">
           <div class="mockup-box">
             <div class="mockup-screen">
               <div class="tag">Inside Begin Better</div>
