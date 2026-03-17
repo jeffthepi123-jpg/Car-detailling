@@ -260,6 +260,24 @@
       gap: 16px;
       align-items: center;
     }
+    .support-strip {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .support-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.6);
+    }
     @media (max-width: 960px) {
       .hero-grid, .grid-2, .grid-3, .pricing-grid, .feature-grid, .proof-grid, .hero-points { grid-template-columns: 1fr; }
       .nav { display: none; }
@@ -283,6 +301,7 @@
         <a href="#inside">Inside</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
+        <a href="#support">Ask Jeff</a>
         <a href="#pricing" class="btn btn-primary">Get Started</a>
       </nav>
     </div>
@@ -305,6 +324,10 @@
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://www.paypal.com/ncp/payment/UVY85SM3ZY5W2">Get the Starter Pack</a>
             <a class="btn btn-secondary" href="#inside">See What’s Inside</a>
+          </div>
+          <div class="support-strip">
+            <a class="support-chip" href="https://wa.me/601154198509?text=Hi%20Jeff%20%E2%80%94%20I%27m%20interested%20in%20Begin%20Better%20and%20want%20help%20choosing%20the%20right%20pack.">Need help choosing? Message Jeff</a>
+            <span>Jeff handles questions, recommendations, and simple support before and after purchase.</span>
           </div>
           <div class="trust-row">
             <div class="trust-pill">Beginner-friendly</div>
@@ -480,6 +503,37 @@
       </div>
     </section>
 
+    <section class="section" id="support">
+      <div class="wrap grid-2" style="align-items:start;">
+        <div>
+          <div class="kicker">Sales support</div>
+          <h2>Not sure which pack fits you? Ask Jeff.</h2>
+          <p class="lead">If you have questions before buying, Jeff can help you choose the right pack, explain what’s included, and answer common questions quickly.</p>
+          <ul class="clean" style="margin-top:18px;">
+            <li>Help choosing between RM19, RM49, and RM99</li>
+            <li>Answers about what is included</li>
+            <li>Beginner guidance before purchase</li>
+            <li>Simple post-purchase help if you get stuck</li>
+          </ul>
+          <div class="hero-actions" style="margin-top:20px;">
+            <a class="btn btn-primary" href="https://wa.me/601154198509?text=Hi%20Jeff%20%E2%80%94%20I%27m%20looking%20at%20Begin%20Better%20and%20want%20help%20choosing%20the%20best%20option.">Message Jeff on WhatsApp</a>
+            <a class="btn btn-secondary" href="#pricing">See pricing first</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="kicker">How it works</div>
+          <h3>Fast human-style answers without the usual friction.</h3>
+          <ul class="clean" style="margin-top:18px;">
+            <li>Ask your question</li>
+            <li>Get a quick recommendation based on your situation</li>
+            <li>Choose the right pack with less guesswork</li>
+            <li>If an issue needs manual review, it gets escalated properly</li>
+          </ul>
+          <p class="muted" style="margin-top:18px;">This is best for buyers who are interested but want a little clarity before paying.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="faq">
       <div class="wrap">
         <div class="kicker">FAQ</div>
@@ -488,6 +542,8 @@
           <details class="faq-item" open><summary>Is this for complete beginners?</summary><p class="muted">Yes. Begin Better is designed specifically for people who want to use AI but do not know where to start.</p></details>
           <details class="faq-item"><summary>Do I need to install complicated software?</summary><p class="muted">No. The goal is to help buyers start using AI without technical setup headaches.</p></details>
           <details class="faq-item"><summary>Who is this best for?</summary><p class="muted">Beginners, freelancers, office workers, and small business owners who want practical AI help they can use quickly.</p></details>
+          <details class="faq-item"><summary>Which pack should most people buy?</summary><p class="muted">Most buyers should start with the RM49 Starter Pack. It has the best balance of clarity, prompts, workflows, and practical value without overloading you.</p></details>
+          <details class="faq-item"><summary>Can I ask questions before buying?</summary><p class="muted">Yes. You can message Jeff on WhatsApp if you want help choosing the right pack or understanding what’s included.</p></details>
           <details class="faq-item"><summary>Will this make me an AI expert?</summary><p class="muted">No. It is meant to make you useful and confident faster, not turn you into a technical specialist overnight.</p></details>
         </div>
       </div>
